@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
     <ThingDef ParentName="BenchBase">
         <defName>ETNPDA</defName>
         <label>NPDA</label>
         <thingClass>Building_WorkTable</thingClass>
-        <!--<thingClass>Building_NutrientPasteDispenser</thingClass>-->
         <description>Description here.</description>
         <graphicData>
             <texPath>Things/Building/Production/NutrientDispenser</texPath>
@@ -51,9 +49,6 @@
                 <fuelConsumptionRate>160.0</fuelConsumptionRate>
                 <fuelCapacity>30.0</fuelCapacity>
                 <fuelFilter>
-                    <!--<thingDefs>-->
-                    <!--<li>EggChickenUnfertilized</li>-->
-                    <!--</thingDefs>-->
                     <categories>
                         <li>PlantFoodRaw</li>
                         <li>MeatRaw</li>
@@ -133,6 +128,17 @@
                 <fuelFilter>
                     <categories>
                         <li>PlantFoodRaw</li>
+                        <!--<li>MeatRaw</li>-->
+                    </categories>
+                </fuelFilter>
+                <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+            </li>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>100.0</fuelConsumptionRate>
+                <fuelCapacity>500.0</fuelCapacity>
+                <fuelFilter>
+                    <categories>
+                        <!--<li>PlantFoodRaw</li>-->
                         <li>MeatRaw</li>
                     </categories>
                 </fuelFilter>
@@ -148,89 +154,5 @@
         </building>
         <constructEffect>ConstructMetal</constructEffect>
         <altitudeLayer>Building</altitudeLayer>
-
     </ThingDef>
-
-
-    <ThingDef ParentName="BuildingBase">
-        <defName>NPD Spot</defName>
-        <label>NPD spot</label>
-        <description>Holy fuck one of these work please</description>
-        <thingClass>Building_WorkTable</thingClass>
-        <graphicData>
-            <texPath>Things/Building/Production/CraftingSpot</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(1,1)</drawSize>
-        </graphicData>
-        <altitudeLayer>FloorEmplacement</altitudeLayer>
-        <statBases>
-            <WorkToBuild>0</WorkToBuild>
-        </statBases>
-        <scatterableOnMapGen>false</scatterableOnMapGen>
-        <useHitPoints>False</useHitPoints>
-        <size>(1,1)</size>
-        <designationCategory>Production</designationCategory>
-        <passability>Standable</passability>
-        <hasInteractionCell>True</hasInteractionCell>
-        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <surfaceType>Item</surfaceType>
-        <inspectorTabs>
-            <li>ITab_Bills</li>
-        </inspectorTabs>
-        <building>
-            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-            <sowTag>SupportPlantsOnly</sowTag>
-            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
-            <ai_chillDestination>false</ai_chillDestination>
-        </building>
-        <recipes>
-            <li>NutrientPasteVegetable</li>
-            <li>NPMeat</li>
-            <li>MakeStoneBlocksAny</li>
-        </recipes>
-    </ThingDef>
-
-    <ThingDef ParentName="BenchBase">
-        <defName>ETTableStonecutter</defName>
-        <label>ET stone table</label>
-        <thingClass>Building_WorkTable_HeatPush</thingClass>
-        <description>fffuuuuuuuu</description>
-        <graphicData>
-            <texPath>Things/Building/Production/TableStonecutter</texPath>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(3.5,1.5)</drawSize>
-            <damageData>
-                <cornerTL>Damage/Corner</cornerTL>
-                <cornerTR>Damage/Corner</cornerTR>
-                <cornerBL>Damage/Corner</cornerBL>
-                <cornerBR>Damage/Corner</cornerBR>
-            </damageData>
-        </graphicData>
-        <costList>
-            <Steel>30</Steel>
-        </costList>
-        <altitudeLayer>Building</altitudeLayer>
-        <fillPercent>0.5</fillPercent>
-        <useHitPoints>True</useHitPoints>
-        <statBases>
-            <WorkToBuild>2000</WorkToBuild>
-            <MaxHitPoints>180</MaxHitPoints>
-            <Flammability>1.0</Flammability>
-        </statBases>
-        <size>(3,1)</size>
-        <designationCategory>Production</designationCategory>
-        <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
-        <hasInteractionCell>True</hasInteractionCell>
-        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <surfaceType>Item</surfaceType>
-        <inspectorTabs>
-            <li>ITab_Bills</li>
-        </inspectorTabs>
-
-        <recipes>
-            <li>MakeStoneBlocksAny</li>
-        </recipes>
-    </ThingDef>
-
 </Defs>

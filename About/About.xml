@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>ET NPDs</name>
-  <author>ET</author>
-  <url>http://nope.nope</url>
-  <description>Make NPDs not a giant hassle.</description>
-  <targetVersion>0.18.1722</targetVersion>
+    <name>ET's Nutrient Paste Dispenser</name>
+    <author>Elia Tarasoff</author>
+    <url>https://github.com/EliaTarasoff/rimworld-nutrient-paste-dispenser</url>
+    <description>Some tweaks to the default NPD.</description>
+    <targetVersion>1.0.1950</targetVersion>
 </ModMetaData>
