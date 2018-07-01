@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>AteNutrientPasteInsect</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate insect meat-paste</label>
+                <description>Not only did I consume nutrient-paste from a tube, but it was made from gray, slimy insect meat. The gear-oil from the machine partly covered the taste, but the texture and aftertaste were still easily identifiable.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>AteNutrientBrickInsect</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate insect meat-brick</label>
+                <description>Not only did I consume a brick of dehydrated nutrient-paste, but it was made from gray, slimy insect meat. The gear-oil and burnt flavor from the machine partly covered the taste, but the texture and aftertaste were still easily identifiable.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

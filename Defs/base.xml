@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>AteNutrientPasteMeal</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate nutrient paste</label>
+                <description>I ate slimy nutrient-paste from a tube. The gear-oil from the machine gives a bit of variety to the taste, I guess.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>AteNutrientBrickMeal</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate nutrient brick</label>
+                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad, but now it also tastes burnt, from the dehydration process.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>
