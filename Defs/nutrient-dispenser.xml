@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!-- Copied from BiofuelRefinery -->
+    <!--
+    Based (mostly) off of BiofuelRefinery, which basically means it's like other benches / stoves.
+     -->
     <ThingDef Name="NutrientPasteDispenser" ParentName="BenchBase">
         <defName>NutrientPasteDispenser</defName>
-        <label>NPD (refinery)</label>
-        <description>Makes paste</description>
+        <label>nutrient dispenser</label>
+        <description>A machine that processes raw foodstuffs into a non-poisonous, wholly edible product. It can extrude paste for quick consumption, and dehydrated bricks for long travels. It uses less ingredients and time than cooking a meal by hand, but nobody likes eating this stuff. On top of that, the machine looks like a freak combination of gears, pipes, and random junk, emits horrid noises, and smells; You don't want to stick around this machine unless you absolutely have to.</description>
         <thingClass>Building_WorkTable</thingClass>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <pathCost>70</pathCost>
         <statBases>
             <MaxHitPoints>400</MaxHitPoints>
-            <WorkToBuild>3000</WorkToBuild>
+            <WorkToBuild>2500</WorkToBuild>
             <Flammability>0.5</Flammability>
+            <Beauty>-30</Beauty>
         </statBases>
-        <!--<minifiedDef/>-->  <!--What does this do?!?-->
-        <!--<thingCategories Inherit="false"/>-->
         <size>(3,2)</size>
         <costList>
-            <Steel>400</Steel>
-            <ComponentIndustrial>6</ComponentIndustrial>
+            <Steel>300</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="CompProperties_Power">
@@ -69,7 +70,7 @@
 
     <WorkGiverDef>
         <defName>DoBillsEtDispenseNutrientPaste</defName>
-        <label>dispense nutrient paste</label>
+        <label>dispense nutrients</label>
         <giverClass>WorkGiver_DoBill</giverClass>
         <workType>Cooking</workType>
         <priorityInType>95</priorityInType>

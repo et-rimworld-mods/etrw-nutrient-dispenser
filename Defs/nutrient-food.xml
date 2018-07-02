@@ -3,7 +3,7 @@
     <RecipeDef Name="MakeNutrientPaste" ParentName="CookMealBase">
         <defName>MakeNutrientPaste</defName>
         <label>extrude nutrient paste</label>
-        <description>Extrude a tube of nutrient paste.</description>
+        <description>Extrude some nutrient paste.</description>
         <jobString>Extruding nutrient paste.</jobString>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
@@ -23,15 +23,17 @@
         <products>
             <MealNutrientPaste>10</MealNutrientPaste>
         </products>
-        <workAmount>1500</workAmount>
+        <workAmount>800</workAmount>
     </RecipeDef>
 
-    <ThingDef Name="MealNutrientBrick" ParentName="MealRottable" Abstract="True">
+    <ThingDef Name="MealNutrientBrick" ParentName="MealRottable">
         <defName>MealNutrientBrick</defName>
         <label>nutrient brick meal</label>
+        <description>Dehydrated nutrient paste. The dehydration process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who liked Charlton Heston movies, and hated everyone else.</description>
         <graphicData>
-            <texPath>Things/Item/Meal/SurvivalPack</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <texPath>Things/Item/Resource/StoneBlocks</texPath>
+            <color>(120,140,80)</color>
         </graphicData>
         <statBases>
             <Nutrition>0.9</Nutrition>
@@ -41,7 +43,7 @@
         </statBases>
         <ingestible>
             <preferability>MealAwful</preferability>
-            <!--<tasteThought>AteNutrientBrickMeal</tasteThought>-->
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
             <ingestEffect>EatVegetarian</ingestEffect>
             <ingestSound>Meal_Eat</ingestSound>
         </ingestible>
@@ -64,8 +66,8 @@
     <RecipeDef Name="MakeNutrientBrick" ParentName="CookMealBase">
         <defName>MakeNutrientBrick</defName>
         <label>extrude nutrient brick</label>
-        <description>Extrude a nutrient brick.</description>
-        <jobString>Extruding nutrient brick.</jobString>
+        <description>Extrude nutrient bricks.</description>
+        <jobString>Extruding nutrient bricks.</jobString>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
@@ -84,6 +86,6 @@
         <products>
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
-        <workAmount>3000</workAmount>
+        <workAmount>2000</workAmount>
     </RecipeDef>
 </Defs>
