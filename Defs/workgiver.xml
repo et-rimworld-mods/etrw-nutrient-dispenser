@@ -7,7 +7,8 @@
         <workType>Cooking</workType>
         <priorityInType>95</priorityInType>
         <fixedBillGiverDefs>
-            <li>NpdBase</li>
+            <!--<li>NpdBase</li>-->
+            <li>NutrientPasteDispenser</li>
         </fixedBillGiverDefs>
         <verb>extrude</verb>
         <gerund>extruding at</gerund>
