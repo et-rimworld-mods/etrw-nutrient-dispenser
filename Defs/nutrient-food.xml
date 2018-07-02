@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <RecipeDef Name="MakeNutrientPaste" ParentName="CookMealBase">
-        <defName>MakeNutrientPaste</defName>
-        <label>extrude nutrient paste</label>
-        <description>Extrude some nutrient paste.</description>
-        <jobString>Extruding nutrient paste.</jobString>
+    <RecipeDef Name="MakeNutrientBase" ParentName="CookMealBase" Abstract="True">
+        <defName>MakeNutrientBase</defName>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
@@ -20,27 +17,42 @@
                 <count>3</count>
             </li>
         </ingredients>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
+        <defName>MakeNutrientPaste</defName>
+        <label>extrude nutrient paste</label>
+        <description>Extrude some nutrient paste.</description>
+        <jobString>Extruding nutrient paste.</jobString>
         <products>
             <MealNutrientPaste>10</MealNutrientPaste>
         </products>
         <workAmount>800</workAmount>
     </RecipeDef>
 
-    <ThingDef Name="MealNutrientBrick" ParentName="MealRottable">
+    <ThingDef Name="MealNutrientBrick" ParentName="MealBase">
         <defName>MealNutrientBrick</defName>
         <label>nutrient brick meal</label>
-        <description>Dehydrated nutrient paste. The dehydration process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who liked Charlton Heston movies, and hated everyone else.</description>
+        <description>Dehydrated nutrient paste, wrapped in polymer made from inedible food-parts. The dehydration, and polymer-wrapping process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who liked Charlton Heston movies, and hated everyone else.</description>
         <graphicData>
             <graphicClass>Graphic_StackCount</graphicClass>
             <texPath>Things/Item/Resource/StoneBlocks</texPath>
             <color>(120,140,80)</color>
         </graphicData>
+        <stackLimit>15</stackLimit>
         <statBases>
             <Nutrition>0.9</Nutrition>
             <MarketValue>10</MarketValue>
             <Mass>0.4</Mass>
-            <DeteriorationRate>2</DeteriorationRate>
+            <DeteriorationRate>5</DeteriorationRate>
         </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>30</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <tradeability>Buyable</tradeability>
         <ingestible>
             <preferability>MealAwful</preferability>
             <tasteThought>AteNutrientBrickMeal</tasteThought>
@@ -58,31 +70,16 @@
             <li>
                 <label>ate nutrient brick</label>
                 <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad, but now it also tastes burnt, from the dehydration process.</description>
-                <baseMoodEffect>-6</baseMoodEffect>
+                <baseMoodEffect>-7</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
 
-    <RecipeDef Name="MakeNutrientBrick" ParentName="CookMealBase">
+    <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBase">
         <defName>MakeNutrientBrick</defName>
         <label>extrude nutrient brick</label>
         <description>Extrude nutrient bricks.</description>
         <jobString>Extruding nutrient bricks.</jobString>
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>FoodRaw</li>
-                    </categories>
-                </filter>
-                <count>3</count>
-            </li>
-        </ingredients>
         <products>
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
