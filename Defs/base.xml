@@ -1,90 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!--Paste-->
-    <ThingDef Name="MealNutrientPaste" ParentName="MealRottable" Abstract="True">
-        <!--<defName>MealNutrientPaste</defName>-->
-        <label>nutrient paste meal</label>
-        <graphicData>
-            <texPath>Things/Item/Meal/NutrientPaste</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <statBases>
-            <Nutrition>0.9</Nutrition>
-            <MarketValue>10</MarketValue>
-            <Mass>0.5</Mass>
-            <DeteriorationRate>2</DeteriorationRate>
-        </statBases>
-    </ThingDef>
-
-    <ThoughtDef>
-        <defName>AteNutrientPasteMeal</defName>
-        <showBubble>true</showBubble>
-        <icon>Things/Mote/ThoughtSymbol/Food</icon>
-        <durationDays>1</durationDays>
-        <stages>
-            <li>
-                <label>ate nutrient paste</label>
-                <description>I ate slimy nutrient-paste from a tube. The gear-oil from the machine gives a bit of variety to the taste, I guess.</description>
-                <baseMoodEffect>-4</baseMoodEffect>
-            </li>
-        </stages>
-    </ThoughtDef>
-
-    <RecipeDef Name="MakeNutrientPaste" Abstract="True">
+    <RecipeDef Name="MakeNutrientPaste" ParentName="CookMealBase">
+        <defName>MakeNutrientPaste</defName>
+        <label>extrude nutrient paste</label>
         <description>Extrude a tube of nutrient paste.</description>
         <jobString>Extruding nutrient paste.</jobString>
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
-        <workAmount>100</workAmount>
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-    </RecipeDef>
-
-    <RecipeDef>
-        <defName>MakeNutrientPasteTestRefinery</defName>
-        <label>make paste</label>
-        <description>Desc.</description>
-        <jobString>Extruding paste</jobString>
-        <effectWorking>Cremate</effectWorking>
-        <soundWorking>Recipe_Cremate</soundWorking>
-        <workAmount>2500</workAmount>
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
         <ingredients>
             <li>
                 <filter>
                     <categories>
-                        <li>Foods</li>
-                        <li>PlantMatter</li>
+                        <li>FoodRaw</li>
                     </categories>
-                    <disallowedThingDefs>
-                        <li>Hay</li>
-                    </disallowedThingDefs>
                 </filter>
                 <count>3</count>
             </li>
         </ingredients>
-        <fixedIngredientFilter>
-            <categories>
-                <li>Foods</li>
-                <li>PlantMatter</li>
-            </categories>
-            <disallowedThingDefs>
-                <li>Hay</li>
-            </disallowedThingDefs>
-        </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <categories>
-                <li>FoodRaw</li>
-            </categories>
-            <disallowedCategories>
-                <li>MeatRaw</li>
-                <li>AnimalProductRaw</li>
-            </disallowedCategories>
-        </defaultIngredientFilter>
         <products>
-            <MealNutrientPastePlant>10</MealNutrientPastePlant>
+            <MealNutrientPaste>10</MealNutrientPaste>
         </products>
+        <workAmount>1500</workAmount>
     </RecipeDef>
 
     <!-- Copied from BiofuelRefinery -->
@@ -118,7 +57,7 @@
             <li Class="CompProperties_Breakdownable"/>
         </comps>
         <recipes>
-            <li>MakeNutrientPasteTestRefinery</li>
+            <li>MakeNutrientPaste</li>
         </recipes>
         <castEdgeShadows>false</castEdgeShadows>
         <staticSunShadowHeight>0</staticSunShadowHeight>
