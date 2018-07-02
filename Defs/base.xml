@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <ThingDef ParentName="MealRottable" Name="MealNutrientPaste" Abstract="True">
+        <defName>MealNutrientPaste</defName>
+        <label>nutrient paste meal</label>
+        <graphicData>
+            <texPath>Things/Item/Meal/NutrientPaste</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>10</MarketValue>
+            <Mass>0.5</Mass>
+            <DeteriorationRate>2</DeteriorationRate>
+        </statBases>
+    </ThingDef>
+
     <ThoughtDef>
         <defName>AteNutrientPasteMeal</defName>
         <showBubble>true</showBubble>
@@ -13,6 +28,26 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <ThingDef ParentName="MealRottable" Name="MealNutrientBrick" Abstract="True">
+        <label>nutrient brick meal</label>
+        <graphicData>
+            <texPath>Things/Item/Meal/SurvivalPack</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>10</MarketValue>
+            <Mass>0.4</Mass>
+            <DeteriorationRate>2</DeteriorationRate>
+        </statBases>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
 
     <ThoughtDef>
         <defName>AteNutrientBrickMeal</defName>

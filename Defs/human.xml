@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!--Paste-->
+    <ThingDef ParentName="MealNutrientPaste">
+        <defName>MealNutrientPasteHuman</defName>
+        <label>nutrient paste (human)</label>
+        <description>A sticky slime...made from human meat. You don't even want to think about what the tube it comes in is made out of.</description>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientPasteMeal</tasteThought>
+            <tasteThought>AteNutrientPasteHuman</tasteThought>
+            <tasteThought>AteNutrientPasteHumanAsCannibal</tasteThought>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
     <ThoughtDef>
         <defName>AteNutrientPasteHuman</defName>
         <showBubble>true</showBubble>
@@ -33,6 +48,22 @@
             </li>
         </stages>
     </ThoughtDef>
+
+
+    <!--Brick-->
+    <ThingDef ParentName="MealNutrientBrick">
+        <defName>MealNutrientBrickHuman</defName>
+        <label>nutrient brick (human)</label>
+        <description>A crumbly brick of dehydrated nutrient paste...made from human meat. You don't even want to think about what the wrapper it comes in is made out of.</description>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <tasteThought>AteNutrientBrickHuman</tasteThought>
+            <tasteThought>AteNutrientBrickHumanAsCannibal</tasteThought>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
 
     <ThoughtDef>
         <defName>AteNutrientBrickHuman</defName>

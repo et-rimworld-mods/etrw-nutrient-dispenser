@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!--Paste-->
+    <ThingDef ParentName="MealNutrientPaste">
+        <defName>MealNutrientPasteInsect</defName>
+        <label>nutrient paste (insect)</label>
+        <description>A sticky slime...made from insect meat. You don't even want to think about what the tube it comes in is made out of.</description>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientPasteMeal</tasteThought>
+            <tasteThought>AteNutrientPasteInsect</tasteThought>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
     <ThoughtDef>
         <defName>AteNutrientPasteInsect</defName>
         <showBubble>true</showBubble>
@@ -14,6 +28,21 @@
         </stages>
     </ThoughtDef>
 
+
+    <!--Brick-->
+    <ThingDef ParentName="MealNutrientBrick">
+        <defName>MealNutrientBrickInsect</defName>
+        <label>nutrient brick (insect)</label>
+        <description>A crumbly brick of dehydrated nutrient paste...made from insect meat. You don't even want to think about what the wrapper it comes in is made out of.</description>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <tasteThought>AteNutrientBrickInsect</tasteThought>
+            <ingestEffect>EatMeat</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
     <ThoughtDef>
         <defName>AteNutrientBrickInsect</defName>
         <showBubble>true</showBubble>
@@ -22,7 +51,7 @@
         <stages>
             <li>
                 <label>ate insect meat-brick</label>
-                <description>Not only did I consume a brick of dehydrated nutrient-paste, but it was made from gray, slimy insect meat. The gear-oil and burnt flavor from the machine partly covered the taste, but the texture and aftertaste were still easily identifiable.</description>
+                <description>Not only did I consume a crumbly, burnt nutrient-brick, but it was made from gray, slimy insect meat. The gear-oil and burnt flavor from the machine partly covered the taste, but the texture and aftertaste were still easily identifiable.</description>
                 <baseMoodEffect>-3</baseMoodEffect>
             </li>
         </stages>

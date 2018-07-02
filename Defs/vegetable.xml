@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="MealNutrientPaste">
+        <defName>MealNutrientPastePlants</defName>
+        <label>nutrient paste (plants)</label>
+        <description>A sticky slime made from vegetables and fruits. It's not appetizing, but it will keep you alive. The tube it comes in is made from plant-matter re-processed into a simple polymer, and helps prevent spoiling.</description>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientPasteMeal</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="MealNutrientBrick">
+        <defName>MealNutrientBrickPlants</defName>
+        <label>nutrient brick (plants)</label>
+        <description>A crumbly brick of dehydrated nutrient paste. It's not appetizing, but it will keep you alive, and it takes longer to degrade, from being dehydrated. The wrapper it comes in is the same polymer that the paste-tubes are made out of.</description>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+</Defs>
