@@ -2,7 +2,7 @@
 <Defs>
     <!--Paste-->
     <ThingDef ParentName="MealRottable" Name="MealNutrientPaste" Abstract="True">
-        <defName>MealNutrientPaste</defName>
+        <!--<defName>MealNutrientPaste</defName>-->
         <label>nutrient paste meal</label>
         <graphicData>
             <texPath>Things/Item/Meal/NutrientPaste</texPath>
@@ -118,48 +118,87 @@
         <!--</recipes>-->
     <!--</ThingDef>-->
 
+    <!-- Copied from CraftingSpot -->
+    <ThingDef Name="NpdBase" ParentName="BuildingBase">
+        <defName>NpdBase</defName>
+        <label>NPD (base)</label>
+        <description>NPD</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Production/CraftingSpot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <statBases>
+            <WorkToBuild>0</WorkToBuild>
+            <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+        </statBases>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(1,1)</size>
+        <designationCategory>Production</designationCategory>
+        <passability>Standable</passability>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <ai_chillDestination>false</ai_chillDestination>
+        </building>
+        <recipes>
+            <li>MakeNutrientPastePlant</li>
+        </recipes>
+    </ThingDef>
 
-    <!--&lt;!&ndash;Brick&ndash;&gt;-->
-    <!--<ThingDef ParentName="MealRottable" Name="MealNutrientBrick" Abstract="True">-->
-        <!--<label>nutrient brick meal</label>-->
-        <!--<graphicData>-->
-            <!--<texPath>Things/Item/Meal/SurvivalPack</texPath>-->
-            <!--<graphicClass>Graphic_Single</graphicClass>-->
-        <!--</graphicData>-->
-        <!--<statBases>-->
-            <!--<Nutrition>0.9</Nutrition>-->
-            <!--<MarketValue>10</MarketValue>-->
-            <!--<Mass>0.4</Mass>-->
-            <!--<DeteriorationRate>2</DeteriorationRate>-->
-        <!--</statBases>-->
-        <!--<ingestible>-->
-            <!--<preferability>MealAwful</preferability>-->
-            <!--<tasteThought>AteNutrientBrickMeal</tasteThought>-->
-            <!--<ingestEffect>EatVegetarian</ingestEffect>-->
-            <!--<ingestSound>Meal_Eat</ingestSound>-->
-        <!--</ingestible>-->
-    <!--</ThingDef>-->
 
-    <!--<ThoughtDef>-->
-        <!--<defName>AteNutrientBrickMeal</defName>-->
-        <!--<showBubble>true</showBubble>-->
-        <!--<icon>Things/Mote/ThoughtSymbol/Food</icon>-->
-        <!--<durationDays>1</durationDays>-->
-        <!--<stages>-->
-            <!--<li>-->
-                <!--<label>ate nutrient brick</label>-->
-                <!--<description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad, but now it also tastes burnt, from the dehydration process.</description>-->
-                <!--<baseMoodEffect>-6</baseMoodEffect>-->
-            <!--</li>-->
-        <!--</stages>-->
-    <!--</ThoughtDef>-->
+    <!--Brick-->
+    <ThingDef ParentName="MealRottable" Name="MealNutrientBrick" Abstract="True">
+        <!--<defName>MealNutrientBrick</defName>-->
+        <label>nutrient brick meal</label>
+        <graphicData>
+            <texPath>Things/Item/Meal/SurvivalPack</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>10</MarketValue>
+            <Mass>0.4</Mass>
+            <DeteriorationRate>2</DeteriorationRate>
+        </statBases>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
 
-    <!--<RecipeDef Name="MakeNutrientBrick" Abstract="True">-->
-        <!--<description>Extrude a nutrient brick.</description>-->
-        <!--<jobString>Extruding nutrient brick.</jobString>-->
-        <!--<effectWorking>Cremate</effectWorking>-->
-        <!--<soundWorking>Recipe_Cremate</soundWorking>-->
-        <!--<workAmount>300</workAmount>-->
-        <!--<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>-->
-    <!--</RecipeDef>-->
+    <ThoughtDef>
+        <defName>AteNutrientBrickMeal</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate nutrient brick</label>
+                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad, but now it also tastes burnt, from the dehydration process.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <RecipeDef Name="MakeNutrientBrick" Abstract="True">
+        <description>Extrude a nutrient brick.</description>
+        <jobString>Extruding nutrient brick.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+        <workAmount>300</workAmount>
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+    </RecipeDef>
 </Defs>

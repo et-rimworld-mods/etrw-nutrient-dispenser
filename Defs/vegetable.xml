@@ -23,23 +23,23 @@
 
 
     <!--Brick-->
-    <!--<ThingDef Name="MealNutrientBrickPlant" ParentName="MealNutrientBrick">-->
-        <!--<defName>MealNutrientBrickPlant</defName>-->
-        <!--<label>nutrient brick (plants)</label>-->
-        <!--<description>A crumbly brick of dehydrated nutrient paste. It's not appetizing, but it will keep you alive, and it takes longer to degrade, from being dehydrated. The wrapper it comes in is the same polymer that the paste-tubes are made out of.</description>-->
-        <!--<ingestible>-->
-            <!--<preferability>MealAwful</preferability>-->
-            <!--<tasteThought>AteNutrientBrickMeal</tasteThought>-->
-            <!--<ingestEffect>EatVegetarian</ingestEffect>-->
-            <!--<ingestSound>Meal_Eat</ingestSound>-->
-        <!--</ingestible>-->
-    <!--</ThingDef>-->
+    <ThingDef Name="MealNutrientBrickPlant" ParentName="MealNutrientBrick">
+        <defName>MealNutrientBrickPlant</defName>
+        <label>nutrient brick (plants)</label>
+        <description>A crumbly brick of dehydrated nutrient paste. It's not appetizing, but it will keep you alive, and it takes longer to degrade, from being dehydrated. The wrapper it comes in is the same polymer that the paste-tubes are made out of.</description>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
 
-    <!--<RecipeDef Name="MakeNutrientBrickPlant"ParentName="MakeNutrientBrick">-->
-        <!--<defName>MakeNutrientBrickPlant</defName>-->
-        <!--<label>extrude nutrient brick (plants)</label>-->
-        <!--<products>-->
-            <!--<MealNutrientBrickPlant>1</MealNutrientBrickPlant>-->
-        <!--</products>-->
-    <!--</RecipeDef>-->
+    <RecipeDef Name="MakeNutrientBrickPlant" ParentName="MakeNutrientBrick">
+        <defName>MakeNutrientBrickPlant</defName>
+        <label>extrude nutrient brick (plants)</label>
+        <products>
+            <MealNutrientBrickPlant>1</MealNutrientBrickPlant>
+        </products>
+    </RecipeDef>
 </Defs>
