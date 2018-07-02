@@ -1,42 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!--
-    Based (mostly) off of BiofuelRefinery, which basically means it's like other benches / stoves.
-     -->
+    <!--Based (mostly) off of BiofuelRefinery, which basically means it's like other benches / stoves.-->
     <ThingDef Name="NutrientPasteDispenser" ParentName="BenchBase">
         <defName>NutrientPasteDispenser</defName>
         <label>nutrient dispenser</label>
         <description>A machine that processes raw foodstuffs into a non-poisonous, wholly edible product. It can extrude paste for quick consumption, and dehydrated bricks for long-term storage and travel. It uses less ingredients and time than cooking a meal by hand, but nobody likes eating this stuff. On top of that, the machine looks like a freak combination of gears, pipes, and random junk, emits horrid noises, and smells; You don't want to stick around this machine unless you absolutely have to.</description>
-        <thingClass>Building_WorkTable</thingClass>
-        <altitudeLayer>Building</altitudeLayer>
-        <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
-        <statBases>
-            <MaxHitPoints>400</MaxHitPoints>
-            <WorkToBuild>2500</WorkToBuild>
-            <Flammability>0.5</Flammability>
-            <Beauty>-30</Beauty>
-        </statBases>
-        <size>(3,2)</size>
-        <costList>
-            <Steel>300</Steel>
-            <ComponentIndustrial>3</ComponentIndustrial>
-        </costList>
-        <comps>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>400</basePowerConsumption>
-                <shortCircuitInRain>true</shortCircuitInRain>
-            </li>
-            <li Class="CompProperties_Flickable"/>
-            <li Class="CompProperties_Breakdownable"/>
-        </comps>
-        <recipes>
-            <li>MakeNutrientPaste</li>
-            <li>MakeNutrientBrick</li>
-        </recipes>
-        <castEdgeShadows>false</castEdgeShadows>
-        <staticSunShadowHeight>0</staticSunShadowHeight>
+
+        <!--visuals-->
         <graphicData>
             <texPath>Things/Building/Production/Refinery</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -50,6 +20,47 @@
                 <rect>(0.3,0.1,2.4,1.8)</rect>
             </damageData>
         </graphicData>
+        <size>(3,2)</size>
+        <castEdgeShadows>false</castEdgeShadows>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
+        <altitudeLayer>Building</altitudeLayer> <!--I think this affects what gets drawn on top or underneath.-->
+
+        <!--Construction costs, prereqs, etc-->
+        <thingClass>Building_WorkTable</thingClass>
+        <passability>PassThroughOnly</passability>
+        <pathCost>70</pathCost>
+        <statBases>
+            <MaxHitPoints>400</MaxHitPoints>
+            <WorkToBuild>2500</WorkToBuild>
+            <Flammability>0.5</Flammability>
+            <Beauty>-30</Beauty>
+        </statBases>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <costList>
+            <Steel>300</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Production</designationCategory> <!--What menu it shows up in, to construct.-->
+        <researchPrerequisites>
+            <li>NutrientPaste</li>
+        </researchPrerequisites>
+
+        <!--How it functions-->
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>400</basePowerConsumption>
+                <shortCircuitInRain>true</shortCircuitInRain>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <recipes>
+            <li>MakeNutrientPaste</li>
+            <li>MakeNutrientBrick</li>
+        </recipes>
+
         <inspectorTabs>
             <li>ITab_Bills</li>
         </inspectorTabs>
@@ -59,13 +70,8 @@
         <fillPercent>0.5</fillPercent>
         <hasInteractionCell>true</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-        <designationCategory>Production</designationCategory>
+        <interactionCellIcon>Stool</interactionCellIcon>
         <surfaceType>Item</surfaceType>
-        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-        <researchPrerequisites>
-            <li>NutrientPaste</li>
-        </researchPrerequisites>
     </ThingDef>
 
     <WorkGiverDef>
