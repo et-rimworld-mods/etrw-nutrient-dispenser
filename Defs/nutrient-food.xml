@@ -26,9 +26,8 @@
         <workAmount>1500</workAmount>
     </RecipeDef>
 
-    <!--Brick-->
     <ThingDef Name="MealNutrientBrick" ParentName="MealRottable" Abstract="True">
-        <!--<defName>MealNutrientBrick</defName>-->
+        <defName>MealNutrientBrick</defName>
         <label>nutrient brick meal</label>
         <graphicData>
             <texPath>Things/Item/Meal/SurvivalPack</texPath>
@@ -42,7 +41,7 @@
         </statBases>
         <ingestible>
             <preferability>MealAwful</preferability>
-            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <!--<tasteThought>AteNutrientBrickMeal</tasteThought>-->
             <ingestEffect>EatVegetarian</ingestEffect>
             <ingestSound>Meal_Eat</ingestSound>
         </ingestible>
@@ -62,12 +61,29 @@
         </stages>
     </ThoughtDef>
 
-    <RecipeDef Name="MakeNutrientBrick" Abstract="True">
+    <RecipeDef Name="MakeNutrientBrick" ParentName="CookMealBase">
+        <defName>MakeNutrientBrick</defName>
+        <label>extrude nutrient brick</label>
         <description>Extrude a nutrient brick.</description>
         <jobString>Extruding nutrient brick.</jobString>
-        <effectWorking>Cremate</effectWorking>
-        <soundWorking>Recipe_Cremate</soundWorking>
-        <workAmount>300</workAmount>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealNutrientBrick>10</MealNutrientBrick>
+        </products>
+        <workAmount>3000</workAmount>
     </RecipeDef>
 </Defs>

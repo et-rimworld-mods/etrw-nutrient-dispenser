@@ -32,6 +32,7 @@
         </comps>
         <recipes>
             <li>MakeNutrientPaste</li>
+            <li>MakeNutrientBrick</li>
         </recipes>
         <castEdgeShadows>false</castEdgeShadows>
         <staticSunShadowHeight>0</staticSunShadowHeight>
