@@ -7,11 +7,10 @@
         <workType>Cooking</workType>
         <priorityInType>95</priorityInType>
         <fixedBillGiverDefs>
-            <li>ETNPDA</li>
-            <li>NPDFueled</li>
+            <li>NpdBase</li>
         </fixedBillGiverDefs>
-        <verb>dispense</verb>
-        <gerund>dispensing at</gerund>
+        <verb>extrude</verb>
+        <gerund>extruding at</gerund>
         <requiredCapacities>
             <li>Manipulation</li>
         </requiredCapacities>
