@@ -60,7 +60,6 @@
             <li>MakeNutrientPaste</li>
             <li>MakeNutrientBrick</li>
         </recipes>
-
         <inspectorTabs>
             <li>ITab_Bills</li>
         </inspectorTabs>
