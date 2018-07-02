@@ -1,16 +1,12 @@
 The official Nutrient Paste Dispenser in Rimworld is a bit old, and has some problems:
-- pawns constantly coming to restock it
+- pawns constantly coming to restock the hoppers (they always try to keep them at max stacks)
 - have to manually set (or copy) the stockpile for each hopper
 - have to build and repair separate hoppers
-- it can be used to make (bad) meals (nearly) infinitely quickly, for short caravans
-- I don't like how they need to be refrigerated, even though they've already got lots of complex machinery inside 
+- it can be used to make (bad) meals (nearly) infinitely quickly (balance!), for short caravans
 
-My aim is to fix NPDs, generally by:
-- make NPDs refueled with foodstuffs similar to wood-fueled stoves or wood-fueled reactors, since pawns only refuel those when they're low
-- get rid of hoppers entirely
-- rebalance everything, so its roughly in line with where it was previously
-
-I get non-refrigeration for free, by making them refueled.
-Unfortunately, this means I need separate buildings for each food type (plants, meat, insect, human),
-because the "fuel" can be any item, but you can't have separate fuels, or only use up certain foods for certain pastes.
-I think that's a decent trade-off.
+This mod addresses that, by making the NPD work like a BiofuelRefinery / Stove.
+(Those are both subclasses of work-bench.)
+The meals now take time to produce, although are still fairly quick, to keep in theme with the original machine.
+The production is in batches, so pawns aren't constantly hauling to it, even if you don't want to micromanage small stockpiles.
+(I feel like that's in line with the original machine - low-effort, but terrible food.)
+I also added dehydrated nutrient bricks, as a bad replacement for packaged survival meals or pemmican.
