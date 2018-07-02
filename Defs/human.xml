@@ -49,6 +49,13 @@
         </stages>
     </ThoughtDef>
 
+    <RecipeDef ParentName="MakeNutrientPaste">
+        <label>extrude nutrient paste (human meat)</label>
+        <products>
+            <MealNutrientPasteHuman>1</MealNutrientPasteHuman>
+        </products>
+    </RecipeDef>
+
 
     <!--Brick-->
     <ThingDef ParentName="MealNutrientBrick">
@@ -98,4 +105,11 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <RecipeDef ParentName="MakeNutrientBrick">
+        <label>extrude nutrient brick (human meat)</label>
+        <products>
+            <MealNutrientBrickHuman>1</MealNutrientBrickHuman>
+        </products>
+    </RecipeDef>
 </Defs>

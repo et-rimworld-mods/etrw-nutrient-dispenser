@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!--Paste-->
     <ThingDef ParentName="MealRottable" Name="MealNutrientPaste" Abstract="True">
         <defName>MealNutrientPaste</defName>
         <label>nutrient paste meal</label>
@@ -29,6 +30,19 @@
         </stages>
     </ThoughtDef>
 
+    <RecipeDef Name="MakeNutrientPaste" Abstract="True">
+        <description>Extrude a tube of nutrient paste.</description>
+        <jobString>Extruding nutrient paste.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <workAmount>100</workAmount>
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+    </RecipeDef>
+
+
+    <!--Brick-->
     <ThingDef ParentName="MealRottable" Name="MealNutrientBrick" Abstract="True">
         <label>nutrient brick meal</label>
         <graphicData>
@@ -62,4 +76,13 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <RecipeDef Name="MakeNutrientBrick" Abstract="True">
+        <description>Extrude a nutrient brick.</description>
+        <jobString>Extruding nutrient brick.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+        <workAmount>300</workAmount>
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+    </RecipeDef>
 </Defs>

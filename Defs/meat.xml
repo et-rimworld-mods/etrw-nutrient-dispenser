@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!--Paste-->
     <ThingDef ParentName="MealNutrientPaste">
         <defName>MealNutrientPasteMeat</defName>
         <label>nutrient paste (meat)</label>
@@ -12,6 +13,15 @@
         </ingestible>
     </ThingDef>
 
+    <RecipeDef ParentName="MakeNutrientPaste">
+        <label>extrude nutrient paste (meat)</label>
+        <products>
+            <MealNutrientPasteMeat>1</MealNutrientPasteMeat>
+        </products>
+    </RecipeDef>
+
+
+    <!--Brick-->
     <ThingDef ParentName="MealNutrientBrick">
         <defName>MealNutrientBrickMeat</defName>
         <label>nutrient brick (meat)</label>
@@ -23,4 +33,11 @@
             <ingestSound>Meal_Eat</ingestSound>
         </ingestible>
     </ThingDef>
+
+    <RecipeDef ParentName="MakeNutrientBrick">
+        <label>extrude nutrient brick (meat)</label>
+        <products>
+            <MealNutrientBrickMeat>1</MealNutrientBrickMeat>
+        </products>
+    </RecipeDef>
 </Defs>
