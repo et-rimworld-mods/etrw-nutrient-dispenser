@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Paste-->
+    <ThingDef ParentName="MealRottable" Name="MealNutrientPaste" Abstract="True">
+        <!--<defName>MealNutrientPaste</defName>-->
+        <label>nutrient paste meal</label>
+        <graphicData>
+            <texPath>Things/Item/Meal/NutrientPaste</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>10</MarketValue>
+            <Mass>0.5</Mass>
+            <DeteriorationRate>2</DeteriorationRate>
+        </statBases>
+    </ThingDef>
+
+    <ThoughtDef>
+        <defName>AteNutrientPasteMeal</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate nutrient paste</label>
+                <description>I ate slimy nutrient-paste from a tube. The gear-oil from the machine gives a bit of variety to the taste, I guess.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <RecipeDef Name="MakeNutrientPaste" Abstract="True">
+        <description>Extrude a tube of nutrient paste.</description>
+        <jobString>Extruding nutrient paste.</jobString>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <workAmount>100</workAmount>
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+    </RecipeDef>
+
+    <!--&lt;!&ndash; Copied mostly BiofuelRefinery, but some NPD and FueledStove &ndash;&gt;-->
+    <!--<ThingDef Name="NpdBase" ParentName="BuildingBase">-->
+        <!--<defName>NpdBase</defName>-->
+        <!--<label>nutrient paste dispenser (base)</label>-->
+        <!--<description>Produces nutrient paste.</description>-->
+        <!--<thingClass>Building</thingClass>-->
+        <!--<graphicData>-->
+            <!--<texPath>Things/Building/Production/Refinery</texPath>-->
+            <!--<graphicClass>Graphic_Multi</graphicClass>-->
+            <!--<shaderType>CutoutComplex</shaderType>-->
+            <!--<drawSize>(3,2)</drawSize>-->
+            <!--<shadowData>-->
+                <!--<volume>(2.22, 0.8, 0.62)</volume>-->
+                <!--<offset>(0, 0, -0.13)</offset>-->
+            <!--</shadowData>-->
+            <!--<damageData>-->
+                <!--<rect>(0.3,0.1,2.4,1.8)</rect>-->
+            <!--</damageData>-->
+        <!--</graphicData>-->
+        <!--<size>(3,2)</size>-->
+		<!--<hasInteractionCell>true</hasInteractionCell>-->
+        <!--<interactionCellOffset>(0,0,-1)</interactionCellOffset>-->
+		<!--<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>-->
+        <!--<altitudeLayer>Building</altitudeLayer>-->
+        <!--<passability>PassThroughOnly</passability>-->
+        <!--<pathCost>70</pathCost>-->
+        <!--<fillPercent>0.5</fillPercent>-->
+        <!--&lt;!&ndash;<rotatable>false</rotatable>&ndash;&gt;-->
+        <!--<statBases>-->
+            <!--<MaxHitPoints>350</MaxHitPoints>-->
+            <!--<WorkToBuild>2500</WorkToBuild>-->
+            <!--<Flammability>0.5</Flammability>-->
+            <!--<Beauty>-20</Beauty>-->
+        <!--</statBases>-->
+        <!--<tickerType>Normal</tickerType>-->
+        <!--<canOverlapZones>false</canOverlapZones>-->
+        <!--<costList>-->
+            <!--<Steel>100</Steel>-->
+            <!--<ComponentIndustrial>3</ComponentIndustrial>-->
+        <!--</costList>-->
+        <!--<comps>-->
+            <!--<li Class="CompProperties_Power">-->
+                <!--<compClass>CompPowerTrader</compClass>-->
+                <!--<basePowerConsumption>200</basePowerConsumption>-->
+            <!--</li>-->
+            <!--<li Class="CompProperties_Flickable"/>-->
+            <!--<li Class="CompProperties_Breakdownable"/>-->
+            <!--<li Class="CompProperties_Refuelable">-->
+                <!--<fuelConsumptionRate>4.5</fuelConsumptionRate>-->
+                <!--<fuelCapacity>30.0</fuelCapacity>-->
+                <!--<fuelFilter>-->
+                    <!--<thingDefs>-->
+                        <!--<li>Chemfuel</li>-->
+                    <!--</thingDefs>-->
+                <!--</fuelFilter>-->
+            <!--</li>-->
+            <!--<li Class="CompProperties_Glower">-->
+                <!--<glowRadius>6</glowRadius>-->
+                <!--<glowColor>(80,112,180,0)</glowColor>-->
+            <!--</li>-->
+        <!--</comps>-->
+        <!--<designationCategory>Production</designationCategory>-->
+        <!--<constructEffect>ConstructMetal</constructEffect>-->
+        <!--<researchPrerequisites>-->
+            <!--<li>NutrientPaste</li>-->
+        <!--</researchPrerequisites>-->
+        <!--<constructionSkillPrerequisite>5</constructionSkillPrerequisite>-->
+        <!--<building>-->
+            <!--<isMealSource>true</isMealSource>-->
+            <!--<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>-->
+        <!--</building>-->
+        <!--<inspectorTabs>-->
+            <!--<li>ITab_Bills</li>-->
+        <!--</inspectorTabs>-->
+        <!--<recipes>-->
+            <!--<li>MakeNutrientPastePlant</li>-->
+        <!--</recipes>-->
+    <!--</ThingDef>-->
+
+    <!-- Copied from CraftingSpot -->
+    <ThingDef Name="NpdBase" ParentName="BuildingBase">
+        <defName>NpdBase</defName>
+        <label>NPD (base)</label>
+        <description>NPD</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Production/CraftingSpot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <statBases>
+            <WorkToBuild>0</WorkToBuild>
+            <WorkTableWorkSpeedFactor>0.5</WorkTableWorkSpeedFactor>
+        </statBases>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <useHitPoints>false</useHitPoints>
+        <size>(1,1)</size>
+        <designationCategory>Production</designationCategory>
+        <passability>Standable</passability>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <sowTag>SupportPlantsOnly</sowTag>
+            <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+            <ai_chillDestination>false</ai_chillDestination>
+        </building>
+        <recipes>
+            <li>MakeNutrientPastePlant</li>
+        </recipes>
+    </ThingDef>
+
+
+    <!--Brick-->
+    <ThingDef ParentName="MealRottable" Name="MealNutrientBrick" Abstract="True">
+        <!--<defName>MealNutrientBrick</defName>-->
+        <label>nutrient brick meal</label>
+        <graphicData>
+            <texPath>Things/Item/Meal/SurvivalPack</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>10</MarketValue>
+            <Mass>0.4</Mass>
+            <DeteriorationRate>2</DeteriorationRate>
+        </statBases>
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+        </ingestible>
+    </ThingDef>
+
+    <ThoughtDef>
+        <defName>AteNutrientBrickMeal</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate nutrient brick</label>
+                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad, but now it also tastes burnt, from the dehydration process.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <RecipeDef Name="MakeNutrientBrick" Abstract="True">
+        <description>Extrude a nutrient brick.</description>
+        <jobString>Extruding nutrient brick.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <soundWorking>Recipe_Cremate</soundWorking>
+        <workAmount>300</workAmount>
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+    </RecipeDef>
+</Defs>
