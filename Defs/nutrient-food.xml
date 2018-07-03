@@ -112,7 +112,7 @@
         <stages>
             <li>
                 <label>ate nutrient brick</label>
-                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad, but now it also tastes burnt, from the dehydration process.</description>
+                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad as the paste, but now it also tastes burnt, from the dehydration process.</description>
                 <baseMoodEffect>-7</baseMoodEffect>
             </li>
         </stages>
