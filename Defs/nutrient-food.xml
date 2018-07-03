@@ -88,6 +88,7 @@
             <MarketValue>10</MarketValue>
             <Mass>0.4</Mass>
             <DeteriorationRate>5</DeteriorationRate>
+            <FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">

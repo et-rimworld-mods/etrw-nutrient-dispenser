@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Paste meals can have food poisoning for some reason.
+Maybe because I made them craftable, instead of how they used to spawn?
+Specifically set the food-poisoning chance to zero.
+(Hopefully this works...)
+-->
+<Patch>
+    <Operation Class="PatchOperationAttributeSet">
+        <xpath>/Defs/ThingDef[defName="MealNutrientPaste"]/statBases/FoodPoisonChanceFixedHuman</xpath>
+        <value>0.0</value>
+    </Operation>
+</Patch>
