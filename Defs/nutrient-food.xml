@@ -92,7 +92,7 @@
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>60</daysToRotStart>
+                <daysToRotStart>80</daysToRotStart>
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
