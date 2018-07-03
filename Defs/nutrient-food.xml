@@ -82,11 +82,11 @@
             <texPath>Things/Item/Resource/StoneBlocks</texPath>
             <color>(120,140,80)</color>
         </graphicData>
-        <stackLimit>20</stackLimit>
+        <stackLimit>15</stackLimit>
         <statBases>
             <Nutrition>0.9</Nutrition>
             <MarketValue>10</MarketValue>
-            <Mass>0.35</Mass>
+            <Mass>0.29</Mass>
             <DeteriorationRate>5</DeteriorationRate>
             <FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
         </statBases>
