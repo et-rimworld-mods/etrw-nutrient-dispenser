@@ -85,7 +85,7 @@
         <stackLimit>15</stackLimit>
         <statBases>
             <Nutrition>0.9</Nutrition>
-            <MarketValue>10</MarketValue>
+            <MarketValue>8</MarketValue>
             <Mass>0.29</Mass>
             <DeteriorationRate>5</DeteriorationRate>
             <FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
@@ -96,7 +96,7 @@
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
-        <tradeability>Buyable</tradeability>
+        <tradeability>Sellable</tradeability>
         <ingestible>
             <preferability>MealAwful</preferability>
             <tasteThought>AteNutrientBrickMeal</tasteThought>
