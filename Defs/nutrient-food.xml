@@ -28,7 +28,7 @@
                 <li>InsectJelly</li>
             </disallowedThingDefs>
         </defaultIngredientFilter>
-        <!--<workSkill>Cooking</workSkill>-->
+        <!--<workSkill>Crafting</workSkill>--> <!--Hmm. If this is left blank, does it default to something, or...?-->
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
