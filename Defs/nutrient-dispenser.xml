@@ -59,6 +59,8 @@
         <recipes>
             <li>MakeNutrientPaste</li>
             <li>MakeNutrientBrick</li>
+            <li>MakeNutrientPasteBulk</li>
+            <li>MakeNutrientBrickBulk</li>
         </recipes>
         <inspectorTabs>
             <li>ITab_Bills</li>
@@ -78,7 +80,7 @@
         <defName>DoBillsEtDispenseNutrientPaste</defName>
         <label>dispense nutrients</label>
         <giverClass>WorkGiver_DoBill</giverClass>
-        <workType>Cooking</workType>
+        <workType>BasicWorker</workType>
         <priorityInType>95</priorityInType>
         <fixedBillGiverDefs>
             <li>NutrientPasteDispenser</li>

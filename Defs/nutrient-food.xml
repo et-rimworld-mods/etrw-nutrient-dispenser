@@ -1,12 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <RecipeDef Name="MakeNutrientBase" ParentName="CookMealBase" Abstract="True">
+    <RecipeDef Name="MakeNutrientBase" Abstract="True">
         <defName>MakeNutrientBase</defName>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <fixedIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <disallowedSpecialFilters>
+                <li>AllowPlantFood</li>
+            </disallowedSpecialFilters>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>EggsFertilized</li>
+            </disallowedCategories>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+                <li>InsectJelly</li>
+            </disallowedThingDefs>
+        </defaultIngredientFilter>
+        <!--<workSkill>Cooking</workSkill>-->
+    </RecipeDef>
+
+    <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
+        <defName>MakeNutrientPaste</defName>
+        <label>extrude nutrient paste</label>
+        <description>Extrude some nutrient paste.</description>
+        <jobString>Extruding nutrient paste.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.3</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealNutrientPaste>1</MealNutrientPaste>
+        </products>
+        <workAmount>200</workAmount>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeNutrientPasteBulk" ParentName="MakeNutrientBase">
+        <defName>MakeNutrientPasteBulk</defName>
+        <label>extrude nutrient paste</label>
+        <description>Extrude some nutrient paste.</description>
+        <jobString>Extruding nutrient paste.</jobString>
         <ingredients>
             <li>
                 <filter>
@@ -17,17 +67,10 @@
                 <count>3</count>
             </li>
         </ingredients>
-    </RecipeDef>
-
-    <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
-        <defName>MakeNutrientPaste</defName>
-        <label>extrude nutrient paste</label>
-        <description>Extrude some nutrient paste.</description>
-        <jobString>Extruding nutrient paste.</jobString>
         <products>
             <MealNutrientPaste>10</MealNutrientPaste>
         </products>
-        <workAmount>800</workAmount>
+        <workAmount>1800</workAmount>
     </RecipeDef>
 
     <ThingDef Name="MealNutrientBrick" ParentName="MealBase">
@@ -78,11 +121,42 @@
     <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBase">
         <defName>MakeNutrientBrick</defName>
         <label>extrude nutrient brick</label>
+        <description>Extrude a nutrient brick.</description>
+        <jobString>Extruding a nutrient brick.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.3</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealNutrientBrick>1</MealNutrientBrick>
+        </products>
+        <workAmount>700</workAmount>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
+        <defName>MakeNutrientBrickBulk</defName>
+        <label>extrude nutrient brick</label>
         <description>Extrude nutrient bricks.</description>
         <jobString>Extruding nutrient bricks.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.3</count>
+            </li>
+        </ingredients>
         <products>
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
-        <workAmount>2000</workAmount>
+        <workAmount>6300</workAmount>
     </RecipeDef>
 </Defs>
