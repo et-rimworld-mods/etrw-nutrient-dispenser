@@ -86,7 +86,7 @@
         <statBases>
             <Nutrition>0.9</Nutrition>
             <MarketValue>10</MarketValue>
-            <Mass>0.4</Mass>
+            <Mass>0.35</Mass>
             <DeteriorationRate>5</DeteriorationRate>
             <FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
         </statBases>
