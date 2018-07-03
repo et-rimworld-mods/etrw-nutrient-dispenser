@@ -6,7 +6,7 @@
         <label>nutrient dispenser</label>
         <description>A machine that processes raw foodstuffs into a non-poisonous, wholly edible product. It can extrude paste for quick consumption, and dehydrated bricks for long-term storage and travel. It uses less ingredients and time than cooking a meal by hand, but nobody likes eating this stuff. On top of that, the machine looks like a freak combination of gears, pipes, and random junk, emits horrid noises, and smells; You don't want to stick around this machine unless you absolutely have to.</description>
 
-        <!--visuals-->
+        <!--Visuals-->
         <graphicData>
             <texPath>Things/Building/Production/Refinery</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -26,9 +26,6 @@
         <altitudeLayer>Building</altitudeLayer> <!--I think this affects what gets drawn on top or underneath.-->
 
         <!--Construction costs, prereqs, etc-->
-        <thingClass>Building_WorkTable</thingClass>
-        <passability>PassThroughOnly</passability>
-        <pathCost>70</pathCost>
         <statBases>
             <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>2500</WorkToBuild>
@@ -47,6 +44,9 @@
         </researchPrerequisites>
 
         <!--How it functions-->
+        <thingClass>Building_WorkTable</thingClass>
+        <passability>PassThroughOnly</passability>
+        <pathCost>70</pathCost>
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
@@ -64,6 +64,7 @@
             <li>ITab_Bills</li>
         </inspectorTabs>
         <building>
+            <isMealSource>true</isMealSource>
             <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
         </building>
         <fillPercent>0.5</fillPercent>
