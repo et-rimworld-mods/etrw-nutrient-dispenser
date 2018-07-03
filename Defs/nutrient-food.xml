@@ -49,7 +49,7 @@
         <products>
             <MealNutrientPaste>1</MealNutrientPaste>
         </products>
-        <workAmount>200</workAmount>
+        <workAmount>100</workAmount>
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientPasteBulk" ParentName="MakeNutrientBase">
@@ -70,7 +70,7 @@
         <products>
             <MealNutrientPaste>10</MealNutrientPaste>
         </products>
-        <workAmount>1800</workAmount>
+        <workAmount>900</workAmount>
     </RecipeDef>
 
     <ThingDef Name="MealNutrientBrick" ParentName="MealBase">
@@ -85,7 +85,7 @@
         <stackLimit>15</stackLimit>
         <statBases>
             <Nutrition>0.9</Nutrition>
-            <MarketValue>8</MarketValue>
+            <MarketValue>7</MarketValue>
             <Mass>0.29</Mass>
             <DeteriorationRate>5</DeteriorationRate>
             <FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
@@ -137,7 +137,7 @@
         <products>
             <MealNutrientBrick>1</MealNutrientBrick>
         </products>
-        <workAmount>500</workAmount>
+        <workAmount>400</workAmount>
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
@@ -158,6 +158,6 @@
         <products>
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
-        <workAmount>4500</workAmount>
+        <workAmount>3600</workAmount>
     </RecipeDef>
 </Defs>
