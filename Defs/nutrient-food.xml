@@ -82,7 +82,7 @@
             <texPath>Things/Item/Resource/StoneBlocks</texPath>
             <color>(120,140,80)</color>
         </graphicData>
-        <stackLimit>15</stackLimit>
+        <stackLimit>20</stackLimit>
         <statBases>
             <Nutrition>0.9</Nutrition>
             <MarketValue>10</MarketValue>
@@ -92,7 +92,7 @@
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>80</daysToRotStart>
+                <daysToRotStart>70</daysToRotStart>
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
