@@ -56,6 +56,10 @@
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Glower">
+                <glowRadius>3</glowRadius>
+                <glowColor>(0,255,0,0)</glowColor>
+            </li>
         </comps>
         <recipes>
             <li>MakeNutrientPaste</li>
