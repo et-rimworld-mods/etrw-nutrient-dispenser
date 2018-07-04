@@ -31,6 +31,7 @@
             <WorkToBuild>2500</WorkToBuild>
             <Flammability>0.5</Flammability>
             <Beauty>-300</Beauty>
+            <Mass>250</Mass>
         </statBases>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
         <costList>
