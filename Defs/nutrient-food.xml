@@ -33,7 +33,7 @@
 
     <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
         <defName>MakeNutrientPaste</defName>
-        <label>extrude nutrient paste</label>
+        <label>nutrient paste</label>
         <description>Extrude some nutrient paste.</description>
         <jobString>Extruding nutrient paste.</jobString>
         <ingredients>
@@ -54,7 +54,7 @@
 
     <RecipeDef Name="MakeNutrientPasteBulk" ParentName="MakeNutrientBase">
         <defName>MakeNutrientPasteBulk</defName>
-        <label>extrude nutrient paste</label>
+        <label>nutrient paste (bulk)</label>
         <description>Extrude some nutrient paste.</description>
         <jobString>Extruding nutrient paste.</jobString>
         <ingredients>
@@ -121,7 +121,7 @@
 
     <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBase">
         <defName>MakeNutrientBrick</defName>
-        <label>extrude nutrient brick</label>
+        <label>nutrient brick</label>
         <description>Extrude a nutrient brick.</description>
         <jobString>Extruding a nutrient brick.</jobString>
         <ingredients>
@@ -142,7 +142,7 @@
 
     <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
         <defName>MakeNutrientBrickBulk</defName>
-        <label>extrude nutrient brick</label>
+        <label>nutrient brick (bulk)</label>
         <description>Extrude nutrient bricks.</description>
         <jobString>Extruding nutrient bricks.</jobString>
         <ingredients>
@@ -152,7 +152,7 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>0.3</count>
+                <count>3</count>
             </li>
         </ingredients>
         <products>
