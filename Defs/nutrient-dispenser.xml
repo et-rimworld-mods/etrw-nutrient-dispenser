@@ -30,7 +30,7 @@
             <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>2500</WorkToBuild>
             <Flammability>0.5</Flammability>
-            <Beauty>-30</Beauty>
+            <Beauty>-300</Beauty>
         </statBases>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
         <costList>
