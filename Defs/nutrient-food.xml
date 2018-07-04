@@ -55,7 +55,7 @@
     <RecipeDef Name="MakeNutrientPasteBulk" ParentName="MakeNutrientBase">
         <defName>MakeNutrientPasteBulk</defName>
         <label>nutrient paste (bulk)</label>
-        <description>Extrude some nutrient paste.</description>
+        <description>Extrude a batch of nutrient paste.</description>
         <jobString>Extruding nutrient paste.</jobString>
         <ingredients>
             <li>
@@ -143,7 +143,7 @@
     <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
         <defName>MakeNutrientBrickBulk</defName>
         <label>nutrient brick (bulk)</label>
-        <description>Extrude nutrient bricks.</description>
+        <description>Extrude a batch of nutrient bricks.</description>
         <jobString>Extruding nutrient bricks.</jobString>
         <ingredients>
             <li>
