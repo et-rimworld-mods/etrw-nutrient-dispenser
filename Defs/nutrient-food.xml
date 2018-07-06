@@ -84,7 +84,7 @@
         </graphicData>
         <stackLimit>15</stackLimit>
         <statBases>
-            <Nutrition>0.9</Nutrition>
+            <Nutrition>0.8</Nutrition>
             <MarketValue>7</MarketValue>
             <Mass>0.29</Mass>
             <DeteriorationRate>5</DeteriorationRate>
@@ -131,7 +131,7 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>0.5</count>
+                <count>0.35</count>
             </li>
         </ingredients>
         <products>
@@ -152,7 +152,7 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>5</count>
+                <count>3.5</count>
             </li>
         </ingredients>
         <products>
