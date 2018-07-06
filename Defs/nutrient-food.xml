@@ -131,7 +131,7 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>0.3</count>
+                <count>0.5</count>
             </li>
         </ingredients>
         <products>
@@ -152,7 +152,7 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>3</count>
+                <count>5</count>
             </li>
         </ingredients>
         <products>
