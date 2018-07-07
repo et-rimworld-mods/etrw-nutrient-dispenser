@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="MealNutrientPaste"]</xpath>
+        <value>
+            <ThingDef Name="MealNutrientPaste" ParentName="MealNutrientBase">
+                <defName>MealNutrientPaste</defName>
+                <label>nutrient paste meal</label>
+                <description>A synthetic pasteurized mixture of protein, fat, starch, sugars, indigestible fibre, vitamins, and minerals. Everything the body needs, and completely disgusting.</description>
+
+                <graphicData>
+                    <texPath>Things/Item/Meal/NutrientPaste</texPath>
+                    <graphicClass>Graphic_Single</graphicClass>
+                </graphicData>
+
+                <stackLimit>10</stackLimit>
+                <statBases>
+                    <MaxHitPoints>50</MaxHitPoints>
+                    <DeteriorationRate>10</DeteriorationRate>
+                    <Nutrition>0.9</Nutrition>
+                    <MarketValue>10</MarketValue>
+                    <Mass>0.44</Mass>
+                </statBases>
+                <comps>
+                    <li Class="CompProperties_Rottable">
+                        <daysToRotStart>4</daysToRotStart>
+                        <rotDestroys>true</rotDestroys>
+                    </li>
+                </comps>
+                <tradeability>Sellable</tradeability>
+                <ingestible>
+                    <optimalityOffsetHumanlikes>-6</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
+                    <tasteThought>AteNutrientPasteMeal</tasteThought>
+                </ingestible>
+            </ThingDef>
+        </value>
+    </Operation>
+</Patch>

@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!--Base-->
+    <ThingDef Name="MealNutrientBase" Abstract="True">
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <altitudeLayer>Item</altitudeLayer>
+
+        <category>Item</category>
+        <thingCategories>
+            <li>FoodMeals</li>
+        </thingCategories>
+        <selectable>true</selectable>
+        <tickerType>Rare</tickerType>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <alwaysHaulable>true</alwaysHaulable>
+        <pathCost>15</pathCost>
+        <resourceReadoutPriority>Last</resourceReadoutPriority>
+
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <Flammability>1.0</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <thingClass>ThingWithComps</thingClass>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Ingredients"/>
+            <!--
+            Make it a safe food, just like the base game's nutrient-paste.
+            (Base game bypasses normal item-generation, and thus ignores this stat.)
+            <li Class="CompProperties_FoodPoisonable"/>
+            -->
+        </comps>
+        <tradeability>Sellable</tradeability>
+        <ingestible>
+            <foodType>Meal</foodType>
+            <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+            <ingestEffect>EatVegetarian</ingestEffect>
+            <ingestSound>Meal_Eat</ingestSound>
+            <preferability>MealAwful</preferability>
+        </ingestible>
+    </ThingDef>
+
     <RecipeDef Name="MakeNutrientBase" Abstract="True">
         <defName>MakeNutrientBase</defName>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
@@ -30,6 +71,22 @@
         </defaultIngredientFilter>
         <!--<workSkill>Crafting</workSkill>--> <!--Hmm. If this is left blank, does it default to something, or...?-->
     </RecipeDef>
+
+
+    <!--Paste-->
+    <ThoughtDef>
+        <defName>AteNutrientPasteMeal</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate nutrient paste</label>
+                <description>My meal was a tube full of gritty, bitter slime. It's keeping me alive, but it's hard to keep down.</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 
     <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
         <defName>MakeNutrientPaste</defName>
@@ -73,22 +130,26 @@
         <workAmount>900</workAmount>
     </RecipeDef>
 
-    <ThingDef Name="MealNutrientBrick" ParentName="MealBase">
+
+    <!--Bricks-->
+    <ThingDef Name="MealNutrientBrick" ParentName="MealNutrientBase">
         <defName>MealNutrientBrick</defName>
         <label>nutrient brick meal</label>
         <description>Dehydrated nutrient paste, wrapped in polymer made from inedible food-parts. The dehydration, and polymer-wrapping process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who liked historical films starring Charlton Heston, and hated everyone else. At least it's better than eating kibble.</description>
+
         <graphicData>
             <graphicClass>Graphic_StackCount</graphicClass>
             <texPath>Things/Item/Resource/StoneBlocks</texPath>
             <color>(120,140,80)</color>
         </graphicData>
+
         <stackLimit>15</stackLimit>
         <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <DeteriorationRate>5</DeteriorationRate>
             <Nutrition>0.8</Nutrition>
             <MarketValue>7</MarketValue>
             <Mass>0.29</Mass>
-            <DeteriorationRate>5</DeteriorationRate>
-            <FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
@@ -98,10 +159,8 @@
         </comps>
         <tradeability>Sellable</tradeability>
         <ingestible>
-            <preferability>MealAwful</preferability>
+            <optimalityOffsetHumanlikes>-7</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
             <tasteThought>AteNutrientBrickMeal</tasteThought>
-            <ingestEffect>EatVegetarian</ingestEffect>
-            <ingestSound>Meal_Eat</ingestSound>
         </ingestible>
     </ThingDef>
 
