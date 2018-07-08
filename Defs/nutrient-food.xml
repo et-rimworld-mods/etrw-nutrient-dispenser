@@ -41,37 +41,6 @@
         </ingestible>
     </ThingDef>
 
-    <RecipeDef Name="MakeNutrientBase" Abstract="True">
-        <defName>MakeNutrientBase</defName>
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-        <fixedIngredientFilter>
-            <categories>
-                <li>FoodRaw</li>
-            </categories>
-            <disallowedSpecialFilters>
-                <li>AllowPlantFood</li>
-            </disallowedSpecialFilters>
-        </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <categories>
-                <li>FoodRaw</li>
-            </categories>
-            <disallowedCategories>
-                <li>EggsFertilized</li>
-            </disallowedCategories>
-            <disallowedThingDefs>
-                <li>Meat_Human</li>
-                <li>Meat_Megaspider</li>
-                <li>InsectJelly</li>
-            </disallowedThingDefs>
-        </defaultIngredientFilter>
-        <!--<workSkill>Crafting</workSkill>--> <!--Hmm. If this is left blank, does it default to something, or...?-->
-    </RecipeDef>
-
 
     <!--Paste-->
     <ThoughtDef>
@@ -87,48 +56,6 @@
             </li>
         </stages>
     </ThoughtDef>
-
-    <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
-        <defName>MakeNutrientPaste</defName>
-        <label>nutrient paste</label>
-        <description>Extrude some nutrient paste.</description>
-        <jobString>Extruding nutrient paste.</jobString>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>FoodRaw</li>
-                    </categories>
-                </filter>
-                <count>0.3</count>
-            </li>
-        </ingredients>
-        <products>
-            <MealNutrientPaste>1</MealNutrientPaste>
-        </products>
-        <workAmount>100</workAmount>
-    </RecipeDef>
-
-    <RecipeDef Name="MakeNutrientPasteBulk" ParentName="MakeNutrientBase">
-        <defName>MakeNutrientPasteBulk</defName>
-        <label>nutrient paste (bulk)</label>
-        <description>Extrude a batch of nutrient paste.</description>
-        <jobString>Extruding nutrient paste.</jobString>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>FoodRaw</li>
-                    </categories>
-                </filter>
-                <count>3</count>
-            </li>
-        </ingredients>
-        <products>
-            <MealNutrientPaste>10</MealNutrientPaste>
-        </products>
-        <workAmount>900</workAmount>
-    </RecipeDef>
 
 
     <!--Bricks-->
@@ -153,7 +80,7 @@
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>70</daysToRotStart>
+                <daysToRotStart>80</daysToRotStart> <!-- pemmican is 70; Raw corn (an ingredient!) is 60 -->
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
@@ -173,50 +100,8 @@
             <li>
                 <label>ate nutrient brick</label>
                 <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad as the paste, but now it also tastes burnt, from the dehydration process.</description>
-                <baseMoodEffect>-7</baseMoodEffect>
+                <baseMoodEffect>-6</baseMoodEffect> <!-- raw food is -7; nutrient paste is -4 -->
             </li>
         </stages>
     </ThoughtDef>
-
-    <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBase">
-        <defName>MakeNutrientBrick</defName>
-        <label>nutrient brick</label>
-        <description>Extrude a nutrient brick.</description>
-        <jobString>Extruding a nutrient brick.</jobString>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>FoodRaw</li>
-                    </categories>
-                </filter>
-                <count>0.35</count>
-            </li>
-        </ingredients>
-        <products>
-            <MealNutrientBrick>1</MealNutrientBrick>
-        </products>
-        <workAmount>400</workAmount>
-    </RecipeDef>
-
-    <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
-        <defName>MakeNutrientBrickBulk</defName>
-        <label>nutrient brick (bulk)</label>
-        <description>Extrude a batch of nutrient bricks.</description>
-        <jobString>Extruding nutrient bricks.</jobString>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>FoodRaw</li>
-                    </categories>
-                </filter>
-                <count>3.5</count>
-            </li>
-        </ingredients>
-        <products>
-            <MealNutrientBrick>10</MealNutrientBrick>
-        </products>
-        <workAmount>3600</workAmount>
-    </RecipeDef>
 </Defs>
