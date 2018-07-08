@@ -43,6 +43,11 @@
 
 
     <!--Paste-->
+    <!--
+    The item is defined in a patch file, to override the base game, and because trying to delete it entirely is bad.
+    (Too many things in base game reference it.)
+    -->
+
     <ThoughtDef>
         <defName>AteNutrientPasteMeal</defName>
         <showBubble>true</showBubble>
