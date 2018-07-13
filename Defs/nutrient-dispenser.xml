@@ -112,9 +112,11 @@
             <categories>
                 <li>FoodRaw</li>
             </categories>
-            <disallowedSpecialFilters>
-                <li>AllowPlantFood</li>
-            </disallowedSpecialFilters>
+
+            <!--Don't need to disable hay anymore...?-->
+            <!--<disallowedSpecialFilters>-->
+                <!--<li>AllowPlantFood</li>-->
+            <!--</disallowedSpecialFilters>-->
         </fixedIngredientFilter>
         <defaultIngredientFilter>
             <categories>
