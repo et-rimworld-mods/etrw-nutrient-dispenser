@@ -2,7 +2,7 @@
 <Defs>
     <!--Based (mostly) off of BiofuelRefinery, which basically means it's like other benches / stoves.-->
     <ThingDef Name="NutrientPasteDispenser" ParentName="BenchBase">
-        <defName>NutrientPasteDispenser</defName>
+        <defName>NutrientPasteDispenser</defName>  <!--Oops. This should probably be patched, rather than just re-use the same name...-->
         <label>nutrient dispenser</label>
         <description>A machine that processes raw foodstuffs into non-poisonous, wholly edible products. It uses less time and ingredients than cooking a meal by hand, but nobody likes eating this stuff. On top of that, the machine looks like a freak combination of gears, pipes, and random junk, emits horrid noises, and smells; You don't want to stick around this machine unless you absolutely have to.</description>
 
@@ -51,7 +51,7 @@
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>500</basePowerConsumption>
+                <basePowerConsumption>250</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
             <li Class="CompProperties_Flickable"/>
