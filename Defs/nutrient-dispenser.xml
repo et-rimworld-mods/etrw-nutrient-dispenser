@@ -74,7 +74,7 @@
             <isMealSource>true</isMealSource>
             <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
         </building>
-        <fillPercent>0.5</fillPercent>
+        <fillPercent>0.4</fillPercent> <!--combat cover effectiveness %-->
         <hasInteractionCell>true</hasInteractionCell>
         <interactionCellOffset>(0,0,-1)</interactionCellOffset>
         <interactionCellIcon>Stool</interactionCellIcon>
