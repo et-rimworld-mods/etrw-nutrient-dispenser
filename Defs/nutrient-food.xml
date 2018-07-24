@@ -79,13 +79,13 @@
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <DeteriorationRate>5</DeteriorationRate>
-            <Nutrition>0.8</Nutrition>
+            <Nutrition>0.9</Nutrition>
             <MarketValue>7</MarketValue>
             <Mass>0.29</Mass>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>80</daysToRotStart> <!-- pemmican is 70; Raw corn (an ingredient!) is 60 -->
+                <daysToRotStart>80</daysToRotStart> <!-- pemmican is 70; Raw corn (an ingredient!) is 60; paste, meals are 4 -->
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
@@ -105,7 +105,7 @@
             <li>
                 <label>ate nutrient brick</label>
                 <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad as the paste, but now it also tastes burnt, from the dehydration process.</description>
-                <baseMoodEffect>-6</baseMoodEffect> <!-- raw food is -7; nutrient paste is -4 -->
+                <baseMoodEffect>-6</baseMoodEffect> <!-- kibble is -12; raw food is -7; nutrient paste is -4, pemmican is 0 -->
             </li>
         </stages>
     </ThoughtDef>
