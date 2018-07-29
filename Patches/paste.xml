@@ -11,7 +11,7 @@
 
                 <graphicData>
                     <texPath>Things/Item/Meal/NutrientPaste</texPath>
-                    <graphicClass>Graphic_Single</graphicClass>
+                    <graphicClass>Graphic_Stackcount</graphicClass>
                 </graphicData>
 
                 <stackLimit>10</stackLimit>
