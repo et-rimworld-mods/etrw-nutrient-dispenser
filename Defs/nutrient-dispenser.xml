@@ -188,13 +188,13 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>0.3</count>
+                <count>0.35</count>
             </li>
         </ingredients>
         <products>
             <MealNutrientBrick>1</MealNutrientBrick>
         </products>
-        <workAmount>500</workAmount>
+        <workAmount>450</workAmount> <!-- packaged survival meal is 450 -->
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
@@ -209,12 +209,12 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>3</count>
+                <count>3.5</count>
             </li>
         </ingredients>
         <products>
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
-        <workAmount>4500</workAmount>
+        <workAmount>4000</workAmount>
     </RecipeDef>
 </Defs>

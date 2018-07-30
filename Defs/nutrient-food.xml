@@ -81,7 +81,7 @@
             <DeteriorationRate>5</DeteriorationRate>
             <Nutrition>0.9</Nutrition>
             <MarketValue>7</MarketValue>
-            <Mass>0.29</Mass>
+            <Mass>0.27</Mass>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
