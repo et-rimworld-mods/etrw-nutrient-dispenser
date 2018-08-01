@@ -28,6 +28,7 @@
             <!--
             Make it a safe food, just like the base game's nutrient-paste.
             (Base game bypasses normal item-generation, and thus ignores this stat.)
+            Do it by by not having this tag:
             <li Class="CompProperties_FoodPoisonable"/>
             -->
         </comps>

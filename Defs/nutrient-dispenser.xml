@@ -194,7 +194,7 @@
         <products>
             <MealNutrientBrick>1</MealNutrientBrick>
         </products>
-        <workAmount>450</workAmount> <!-- packaged survival meal is 450 -->
+        <workAmount>400</workAmount> <!-- packaged survival meal is 450 -->
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
@@ -215,6 +215,6 @@
         <products>
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
-        <workAmount>4000</workAmount>
+        <workAmount>3500</workAmount>
     </RecipeDef>
 </Defs>
