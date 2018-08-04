@@ -16,7 +16,7 @@
 
                 <stackLimit>10</stackLimit>
                 <statBases>
-                    <MaxHitPoints>50</MaxHitPoints>
+                    <MaxHitPoints>25</MaxHitPoints>
                     <DeteriorationRate>10</DeteriorationRate>
                     <Nutrition>0.9</Nutrition>
                     <MarketValue>10</MarketValue>
