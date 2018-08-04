@@ -24,11 +24,11 @@
                 </statBases>
                 <comps>
                     <li Class="CompProperties_Rottable">
-                        <daysToRotStart>4</daysToRotStart>
+                        <daysToRotStart>2</daysToRotStart>
                         <rotDestroys>true</rotDestroys>
                     </li>
                 </comps>
-                <tradeability>Sellable</tradeability>
+                <tradeability>Buyable</tradeability>
                 <ingestible>
                     <optimalityOffsetHumanlikes>-6</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
                     <tasteThought>AteNutrientPasteMeal</tasteThought>

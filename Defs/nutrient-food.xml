@@ -23,16 +23,15 @@
         </statBases>
         <thingClass>ThingWithComps</thingClass>
         <comps>
-            <li Class="CompProperties_Forbiddable"/>
-            <li Class="CompProperties_Ingredients"/>
             <!--
             Make it a safe food, just like the base game's nutrient-paste.
             (Base game bypasses normal item-generation, and thus ignores this stat.)
             Do it by by not having this tag:
             <li Class="CompProperties_FoodPoisonable"/>
             -->
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Ingredients"/>
         </comps>
-        <tradeability>Sellable</tradeability>
         <ingestible>
             <foodType>Meal</foodType>
             <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
@@ -81,12 +80,12 @@
             <MaxHitPoints>100</MaxHitPoints>
             <DeteriorationRate>5</DeteriorationRate>
             <Nutrition>0.9</Nutrition>
-            <MarketValue>7</MarketValue>
+            <MarketValue>7</MarketValue> <!-- Raw vegetables are ($1.1 / 0.05 nutrition) * 0.3 nutrition = $6.6 per brick. These should not be good to trade; Not terrible, but not good. -->
             <Mass>0.27</Mass>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>80</daysToRotStart> <!-- pemmican is 70; Raw corn (an ingredient!) is 60; paste, meals are 4 -->
+                <daysToRotStart>40</daysToRotStart> <!-- pemmican 70; raw corn 60; rice 40, potatoes30, berries 14, paste, meals 4 -->
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
