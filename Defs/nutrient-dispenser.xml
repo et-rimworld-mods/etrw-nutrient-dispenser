@@ -131,7 +131,7 @@
                 <li>InsectJelly</li>
             </disallowedThingDefs>
         </defaultIngredientFilter>
-        <!--<workSkill>Crafting</workSkill>--> <!--Hmm. If this is left blank, does it default to something, or...?-->
+        <workSkill>Crafting</workSkill> <!-- If this is left blank, it seems to allow any pawn to work the recipe, regardless of work-restriction. Given the description of "crafting" i nthe base game, it's meant to represent general-purpose labour, that's slightly more skilled than just sweeping. Setting this also makes the recipe give experience points for the skill. (Not sure how to override how much / any.) This is OK, I guess, since you could watch the machine better / make sure it doesn't break down? -->
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">

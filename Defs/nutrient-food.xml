@@ -85,7 +85,7 @@
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>40</daysToRotStart> <!-- pemmican 70; raw corn 60; rice 40, potatoes30, berries 14, paste, meals 4 -->
+                <daysToRotStart>40</daysToRotStart> <!-- pemmican 70, corn 60, rice 40, potatoes 30, berries 14, meals 4 -->
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
