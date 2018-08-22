@@ -72,7 +72,7 @@
         <graphicData>
             <graphicClass>Graphic_StackCount</graphicClass>
             <texPath>Things/Item/Resource/StoneBlocks</texPath>
-            <color>(120,140,80)</color>
+            <color>(120, 140, 80)</color>
         </graphicData>
 
         <stackLimit>15</stackLimit>
@@ -109,4 +109,58 @@
             </li>
         </stages>
     </ThoughtDef>
+
+
+    <!--Fruit Leather-->
+    <ThingDef Name="MealFruitLeather" ParentName="MealNutrientBase">
+        <defName>MealFruitLeather</defName>
+        <label>fruit leather</label>
+        <description>Dehydrated fruit. It's sweet taste makes up for its bland texture, but also makes you thirsty.</description>
+
+        <graphicData>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <texPath>Things/Item/Resource/Cloth</texPath>
+            <color>(90, 0, 130)</color>
+        </graphicData>
+
+        <stackLimit>13</stackLimit>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <DeteriorationRate>8</DeteriorationRate>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>18</MarketValue> <!-- simple meals are 15, survival packs are 25 -->
+            <Mass>0.27</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>25</daysToRotStart> <!-- potatoes/rawfungus 30, agave 25, berries 14 -->
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <tradeability>Sellable</tradeability>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
+        </ingestible>
+    </ThingDef>
+
+    <ResearchTabDef>
+		<defName>Nutrients</defName>
+		<label>Nutrients</label>
+	</ResearchTabDef>
+
+    <ResearchProjectDef>
+        <defName>FruitLeather</defName>
+        <label>fruit leather</label>
+        <description>Dehydrate fruit, to lengthen its shelf-life. Requires careful control of the temperature and humidity.
+        </description>
+        <baseCost>300</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>NutrientPaste</li>
+        </prerequisites>
+        <tab>Nutrients</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
 </Defs>

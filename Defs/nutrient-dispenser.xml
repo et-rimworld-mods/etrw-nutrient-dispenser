@@ -63,9 +63,11 @@
         </comps>
         <recipes>
             <li>MakeNutrientPaste</li>
-            <li>MakeNutrientBrick</li>
             <li>MakeNutrientPasteBulk</li>
+            <li>MakeNutrientBrick</li>
             <li>MakeNutrientBrickBulk</li>
+            <li>MakeFruitLeather</li>
+            <li>MakeFruitLeatherBulk</li>
         </recipes>
         <inspectorTabs>
             <li>ITab_Bills</li>
@@ -104,6 +106,7 @@
     <RecipeDef Name="MakeNutrientBase" Abstract="True">
         <defName>MakeNutrientBase</defName>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
@@ -112,11 +115,9 @@
             <categories>
                 <li>FoodRaw</li>
             </categories>
-
-            <!--Don't need to disable hay anymore...?-->
-            <!--<disallowedSpecialFilters>-->
-                <!--<li>AllowPlantFood</li>-->
-            <!--</disallowedSpecialFilters>-->
+            <specialFiltersToDisallow>
+                <li>AllowPlantFood</li>
+            </specialFiltersToDisallow>
         </fixedIngredientFilter>
         <defaultIngredientFilter>
             <categories>
@@ -131,7 +132,6 @@
                 <li>InsectJelly</li>
             </disallowedThingDefs>
         </defaultIngredientFilter>
-        <workSkill>Crafting</workSkill> <!-- If this is left blank, it seems to allow any pawn to work the recipe, regardless of work-restriction. Given the description of "crafting" i nthe base game, it's meant to represent general-purpose labour, that's slightly more skilled than just sweeping. Setting this also makes the recipe give experience points for the skill. (Not sure how to override how much / any.) This is OK, I guess, since you could watch the machine better / make sure it doesn't break down? -->
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
@@ -216,5 +216,82 @@
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
         <workAmount>3500</workAmount>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeFruitLeather">
+        <defName>MakeFruitLeather</defName>
+        <label>fruit leather</label>
+        <description>Dehydrate some fruit.</description>
+        <jobString>Dehydrating some fruit.</jobString>
+
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawBerries</li>
+                    </thingDefs>
+                </filter>
+                <count>0.9</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <MealFruitLeather>1</MealFruitLeather>
+        </products>
+        <workAmount>400</workAmount> <!-- packaged survival meal is 450 -->
+    </RecipeDef>
+
+    <RecipeDef Name="MakeFruitLeatherBulk">
+        <defName>MakeFruitLeatherBulk</defName>
+        <label>fruit leather (bulk)</label>
+        <description>Dehydrate a batch of fruit.</description>
+        <jobString>Dehydrating a batch of fruit.</jobString>
+
+        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_CookMeal</soundWorking>
+        <allowMixingIngredients>true</allowMixingIngredients>
+        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawBerries</li>
+                    </thingDefs>
+                </filter>
+                <count>9.0</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <products>
+            <MealNutrientBrick>10</MealNutrientBrick>
+        </products>
+        <workAmount>3500</workAmount>
+        <researchPrerequisite>FruitLeather</researchPrerequisite>
     </RecipeDef>
 </Defs>
