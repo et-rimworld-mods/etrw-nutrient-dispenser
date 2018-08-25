@@ -194,7 +194,7 @@
         <products>
             <MealNutrientBrick>1</MealNutrientBrick>
         </products>
-        <workAmount>400</workAmount> <!-- packaged survival meal is 450 -->
+        <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 700 (787 per same 0.9 nutrition output) -->
     </RecipeDef>
 
     <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
@@ -253,7 +253,7 @@
         <products>
             <MealFruitLeather>1</MealFruitLeather>
         </products>
-        <workAmount>400</workAmount> <!-- packaged survival meal is 450 -->
+        <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 700 (787 per same 0.9 nutrition output) -->
     </RecipeDef>
 
     <RecipeDef Name="MakeFruitLeatherBulk">
@@ -289,7 +289,7 @@
             </thingDefs>
         </defaultIngredientFilter>
         <products>
-            <MealNutrientBrick>10</MealNutrientBrick>
+            <MealFruitLeather>10</MealFruitLeather>
         </products>
         <workAmount>3500</workAmount>
         <researchPrerequisite>FruitLeather</researchPrerequisite>

@@ -152,8 +152,7 @@
     <ResearchProjectDef>
         <defName>FruitLeather</defName>
         <label>fruit leather</label>
-        <description>Dehydrate fruit, to lengthen its shelf-life. Requires careful control of the temperature and humidity.
-        </description>
+        <description>Dehydrate fruit, to lengthen its shelf-life. Requires careful control of the temperature and humidity.</description>
         <baseCost>300</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
