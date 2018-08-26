@@ -254,6 +254,7 @@
             <MealFruitLeather>1</MealFruitLeather>
         </products>
         <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 700 (787 per same 0.9 nutrition output) -->
+        <researchPrerequisite>FruitLeather</researchPrerequisite>
     </RecipeDef>
 
     <RecipeDef Name="MakeFruitLeatherBulk">
