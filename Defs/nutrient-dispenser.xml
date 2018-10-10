@@ -83,7 +83,7 @@
         <surfaceType>Item</surfaceType>
     </ThingDef>
 
-    <!--Make the dispenser actuallly interactible-->
+    <!--Make the dispenser actually interactable-->
     <WorkGiverDef>
         <defName>DoBillsEtDispenseNutrientPaste</defName>
         <label>dispense nutrients</label>
