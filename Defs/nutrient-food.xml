@@ -93,7 +93,7 @@
         <ingestible>
             <optimalityOffsetHumanlikes>-7</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
             <tasteThought>AteNutrientBrickMeal</tasteThought>
-            <baseIngestTicks>2000</baseIngestTicks>  <!-- Not sure how slow meals are - they don't have any values defined in XML. Maybe 600? Seems like 60 ticks per second. -->
+            <baseIngestTicks>1500</baseIngestTicks>  <!-- Not sure how slow meals are - they don't have any values defined in XML. Maybe 600? Seems like 60 ticks per second. -->
         </ingestible>
     </ThingDef>
 
