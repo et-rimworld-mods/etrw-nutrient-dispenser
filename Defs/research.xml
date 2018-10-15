@@ -19,4 +19,82 @@
             <li>NutrientPaste</li>
         </prerequisites>
     </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>InsectMeat</defName>
+        <label>insect meat</label>
+        <description>The bio-engineered insects on this planet have exceptionally tough, odious body tissues. You need to reprogram the machine to be able to process these things.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>1</researchViewX>
+        <researchViewY>0</researchViewY>
+
+        <baseCost>400</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>NutrientPaste</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>HumanMeat</defName>
+        <label>human meat</label>
+        <description>Cannibalism is more dangerous than eating other animals, because of the increased risk of parasites and disease-spread. The machine needs to be re-calibrated, with extra processing cycles, to make this safe to eat.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>2</researchViewX>
+        <researchViewY>0</researchViewY>
+
+        <baseCost>600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>NutrientPaste</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+
+    <ResearchProjectDef>
+        <defName>NutrientBrick</defName>
+        <label>nutrient brick</label>
+        <description>Dehydrated, polymer-wrapped nutrient bricks were invented to keep people alive on long-haul cargo routes. Your "research" is actually breaking the fail-safe encryption codes, put there to keep people from eating this crud.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>400</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>NutrientPaste</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>InsectMeatBrick</defName>
+        <label>insect meat brick</label>
+        <description>Processing the insects inedible parts requires careful calibration, since they are so tough.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>1</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>InsectMeat</li>
+            <li>NutrientBrick</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>HumanMeatBrick</defName>
+        <label>human meat brick</label>
+        <description>Processing human material into a stable polymer requires extra time, since it is so disease-prone.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>2</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>1200</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>HumanMeat</li>
+            <li>NutrientBrick</li>
+        </prerequisites>
+    </ResearchProjectDef>
 </Defs>

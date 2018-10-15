@@ -102,7 +102,7 @@
     </WorkGiverDef>
 
 
-    <!--Recipes-->
+
     <RecipeDef Name="MakeNutrientBase" Abstract="True">
         <defName>MakeNutrientBase</defName>
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
@@ -174,48 +174,6 @@
             <MealNutrientPaste>10</MealNutrientPaste>
         </products>
         <workAmount>900</workAmount>
-    </RecipeDef>
-
-    <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBase">
-        <defName>MakeNutrientBrick</defName>
-        <label>nutrient brick</label>
-        <description>Extrude a nutrient brick.</description>
-        <jobString>Extruding a nutrient brick.</jobString>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>FoodRaw</li>
-                    </categories>
-                </filter>
-                <count>0.35</count>
-            </li>
-        </ingredients>
-        <products>
-            <MealNutrientBrick>1</MealNutrientBrick>
-        </products>
-        <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 700 (787 per same 0.9 nutrition output) -->
-    </RecipeDef>
-
-    <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
-        <defName>MakeNutrientBrickBulk</defName>
-        <label>nutrient brick (bulk)</label>
-        <description>Extrude a batch of nutrient bricks.</description>
-        <jobString>Extruding nutrient bricks.</jobString>
-        <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>FoodRaw</li>
-                    </categories>
-                </filter>
-                <count>3.5</count>
-            </li>
-        </ingredients>
-        <products>
-            <MealNutrientBrick>10</MealNutrientBrick>
-        </products>
-        <workAmount>3500</workAmount>
     </RecipeDef>
 
     <RecipeDef Name="MakeFruitLeather">
@@ -295,4 +253,53 @@
         <workAmount>3500</workAmount>
         <researchPrerequisite>FruitLeather</researchPrerequisite>
     </RecipeDef>
+
+    <!--TODO make separate recipes for insect and human-->
+
+
+    <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBase">
+        <defName>MakeNutrientBrick</defName>
+        <label>nutrient brick</label>
+        <description>Extrude a nutrient brick.</description>
+        <jobString>Extruding a nutrient brick.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.35</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealNutrientBrick>1</MealNutrientBrick>
+        </products>
+        <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 787 (per same 0.9 nutrition output) -->
+        <researchPrerequisite>NutrientBrick</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
+        <defName>MakeNutrientBrickBulk</defName>
+        <label>nutrient brick (bulk)</label>
+        <description>Extrude a batch of nutrient bricks.</description>
+        <jobString>Extruding nutrient bricks.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>3.5</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealNutrientBrick>10</MealNutrientBrick>
+        </products>
+        <workAmount>3500</workAmount>
+        <researchPrerequisite>NutrientBrick</researchPrerequisite>
+    </RecipeDef>
+
+    <!--TODO make separate recipes for insect and human-->
 </Defs>
