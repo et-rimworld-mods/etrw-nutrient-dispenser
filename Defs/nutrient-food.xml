@@ -55,7 +55,7 @@
         </stages>
     </ThoughtDef>
 
-    <ThingDef Name="MealNutrientPasteBase" ParentName="MealNutrientBase">
+    <ThingDef Name="MealNutrientPasteBase" ParentName="MealNutrientBase" Abstract="True">
         <graphicData>
             <texPath>Things/Item/Meal/NutrientPaste</texPath>
             <graphicClass>Graphic_Stackcount</graphicClass>
@@ -147,9 +147,10 @@
         </stages>
     </ThoughtDef>
 
-    <ThingDef Name="MealNutrientBrickBase" ParentName="MealNutrientBase">
+    <ThingDef Name="MealNutrientBrickBase" ParentName="MealNutrientBase" Abstract="True">
         <graphicData>
-            <color>(120, 140, 80)</color>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <texPath>Things/Item/Resource/StoneBlocks</texPath>
         </graphicData>
 
         <stackLimit>15</stackLimit>

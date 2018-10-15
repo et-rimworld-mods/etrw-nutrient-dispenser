@@ -433,7 +433,7 @@
 
 
     <RecipeDef Name="MakeInsectBrickBase" ParentName="MakeInsectPasteOrBrickBase" Abstract="True">
-        <researchPrerequisite>InsectBrick</researchPrerequisite>
+        <researchPrerequisite>InsectMeatBrick</researchPrerequisite>
     </RecipeDef>
 
     <RecipeDef Name="MakeInsectBrick" ParentName="MakeInsectBrickBase">
@@ -482,7 +482,7 @@
 
 
     <RecipeDef Name="MakeHumanBrickBase" ParentName="MakeHumanPasteOrBrickBase" Abstract="True">
-        <researchPrerequisite>HumanBrick</researchPrerequisite>
+        <researchPrerequisite>HumanMeatBrick</researchPrerequisite>
     </RecipeDef>
 
     <RecipeDef Name="MakeHumanBrick" ParentName="MakeHumanBrickBase">

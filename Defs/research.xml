@@ -56,7 +56,7 @@
         <label>nutrient brick</label>
         <description>Dehydrated, polymer-wrapped nutrient bricks were invented to keep people alive on long-haul cargo routes. Your "research" is actually breaking the fail-safe encryption codes, put there to keep people from eating this crud.</description>
         <tab>Nutrients</tab>
-        <researchViewX>0</researchViewX>
+        <researchViewX>1</researchViewX>
         <researchViewY>1</researchViewY>
 
         <baseCost>400</baseCost>
@@ -71,7 +71,7 @@
         <label>insect meat brick</label>
         <description>Processing the insects inedible parts requires careful calibration, since they are so tough.</description>
         <tab>Nutrients</tab>
-        <researchViewX>1</researchViewX>
+        <researchViewX>2</researchViewX>
         <researchViewY>1</researchViewY>
 
         <baseCost>800</baseCost>
@@ -87,7 +87,7 @@
         <label>human meat brick</label>
         <description>Processing human material into a stable polymer requires extra time, since it is so disease-prone.</description>
         <tab>Nutrients</tab>
-        <researchViewX>2</researchViewX>
+        <researchViewX>3</researchViewX>
         <researchViewY>1</researchViewY>
 
         <baseCost>1200</baseCost>
