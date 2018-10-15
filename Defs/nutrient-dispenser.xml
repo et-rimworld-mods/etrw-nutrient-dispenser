@@ -215,7 +215,7 @@
         <researchPrerequisite>InsectMeat</researchPrerequisite>
     </RecipeDef>
 
-    <RecipeDef ParentName="MakeNutrientPasteBase">
+    <RecipeDef ParentName="MakeInsectPasteBase">
         <defName>MakeInsectPaste</defName>
         <label>insect paste</label>
         <description>Extrude some insect paste.</description>
@@ -237,7 +237,7 @@
         <workAmount>100</workAmount>
     </RecipeDef>
 
-    <RecipeDef ParentName="MakeNutrientPasteBase">
+    <RecipeDef ParentName="MakeInsectPasteBase">
         <defName>MakeInsectPasteBulk</defName>
         <label>insect paste (bulk)</label>
         <description>Extrude a batch of insect paste.</description>
@@ -277,7 +277,7 @@
         <researchPrerequisite>HumanMeat</researchPrerequisite>
     </RecipeDef>
 
-    <RecipeDef ParentName="MakeNutrientPasteBase">
+    <RecipeDef ParentName="MakeHumanPasteBase">
         <defName>MakeHumanPaste</defName>
         <label>human paste</label>
         <description>Extrude some human paste.</description>
@@ -299,7 +299,7 @@
         <workAmount>100</workAmount>
     </RecipeDef>
 
-    <RecipeDef ParentName="MakeNutrientPasteBase">
+    <RecipeDef ParentName="MakeHumanPasteBase">
         <defName>MakeHumanPasteBulk</defName>
         <label>human paste (bulk)</label>
         <description>Extrude a batch of human paste.</description>
