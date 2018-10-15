@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!--Base-->
     <ThingDef Name="MealNutrientBase" Abstract="True">
         <drawGUIOverlay>true</drawGUIOverlay>
         <altitudeLayer>Item</altitudeLayer>
@@ -42,12 +41,6 @@
     </ThingDef>
 
 
-    <!--Paste-->
-    <!--
-    The item is defined in a patch file, to override the base game, and because trying to delete it entirely is bad.
-    (Too many things in base game reference it.)
-    -->
-
     <ThoughtDef>
         <defName>AteNutrientPasteMeal</defName>
         <showBubble>true</showBubble>
@@ -62,57 +55,51 @@
         </stages>
     </ThoughtDef>
 
-
-    <!--Bricks-->
-    <ThingDef Name="MealNutrientBrick" ParentName="MealNutrientBase">
-        <defName>MealNutrientBrick</defName>
-        <label>nutrient brick meal</label>
-        <description>Dehydrated nutrient paste, wrapped in polymer made from inedible food-parts. The dehydration, and polymer-wrapping process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who liked historical films starring Charlton Heston, and hated everyone else. At least it's better than eating kibble.</description>
-
+    <ThingDef Name="MealNutrientPasteBase" ParentName="MealNutrientBase">
         <graphicData>
-            <graphicClass>Graphic_StackCount</graphicClass>
-            <texPath>Things/Item/Resource/StoneBlocks</texPath>
-            <color>(120, 140, 80)</color>
+            <texPath>Things/Item/Meal/NutrientPaste</texPath>
+            <graphicClass>Graphic_Stackcount</graphicClass>
         </graphicData>
 
-        <stackLimit>15</stackLimit>
+        <stackLimit>10</stackLimit>
         <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
-            <DeteriorationRate>5</DeteriorationRate>
+            <MaxHitPoints>25</MaxHitPoints>
+            <DeteriorationRate>10</DeteriorationRate>
             <Nutrition>0.9</Nutrition>
-            <MarketValue>7</MarketValue> <!-- Raw vegetables are ($1.1 / 0.05 nutrition) * 0.3 nutrition = $6.6 per brick. These should not be good to trade; Not terrible, but not good. -->
-            <Mass>0.27</Mass>
+            <MarketValue>10</MarketValue>
+            <Mass>0.44</Mass>
         </statBases>
         <comps>
             <li Class="CompProperties_Rottable">
-                <daysToRotStart>40</daysToRotStart> <!-- pemmican 70, corn 60, rice 40, potatoes 30, berries 14, meals 4 -->
+                <daysToRotStart>2</daysToRotStart> <!-- pemmican 70, corn 60, rice 40, potatoes 30, berries 14, meals 4 -->
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
-        <tradeability>Sellable</tradeability>
+        <tradeability>Buyable</tradeability>
         <ingestible>
-            <optimalityOffsetHumanlikes>-7</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
-            <tasteThought>AteNutrientBrickMeal</tasteThought>
-            <baseIngestTicks>1500</baseIngestTicks>  <!-- Not sure how slow meals are - they don't have any values defined in XML. Maybe 600? Seems like 60 ticks per second. -->
+            <optimalityOffsetHumanlikes>-6</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
+            <tasteThought>AteNutrientPasteMeal</tasteThought>
         </ingestible>
     </ThingDef>
 
-    <ThoughtDef>
-        <defName>AteNutrientBrickMeal</defName>
-        <showBubble>true</showBubble>
-        <icon>Things/Mote/ThoughtSymbol/Food</icon>
-        <durationDays>1</durationDays>
-        <stages>
-            <li>
-                <label>ate nutrient brick</label>
-                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad as the paste, but now it also tastes burnt, from the dehydration process.</description>
-                <baseMoodEffect>-6</baseMoodEffect> <!-- kibble is -12; raw food is -7; nutrient paste is -4, pemmican is 0 -->
-            </li>
-        </stages>
-    </ThoughtDef>
+    <!--
+    MealNutrientPaste is defined in a patch file to override the base game, because trying to delete it entirely is bad.
+    (Too many things in base game reference it.)
+    -->
+
+    <ThingDef ParentName="MealNutrientPasteBase">
+        <defName>MealInsectPaste</defName>
+        <label>insect paste meal</label>
+        <description>A coarse slime made from processed insect meat.</description>
+    </ThingDef>
+
+    <ThingDef ParentName="MealNutrientPasteBase">
+        <defName>MealHumanPaste</defName>
+        <label>human paste meal</label>
+        <description>A greasy slime made from processed human meat.</description>
+    </ThingDef>
 
 
-    <!--Fruit Leather-->
     <ThingDef Name="MealFruitLeather" ParentName="MealNutrientBase">
         <defName>MealFruitLeather</defName>
         <label>fruit leather</label>
@@ -143,5 +130,77 @@
             <preferability>MealSimple</preferability>
             <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
         </ingestible>
+    </ThingDef>
+
+
+    <ThoughtDef>
+        <defName>AteNutrientBrickMeal</defName>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <durationDays>1</durationDays>
+        <stages>
+            <li>
+                <label>ate nutrient brick</label>
+                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad as the paste, but now it also tastes burnt, from the dehydration process.</description>
+                <baseMoodEffect>-6</baseMoodEffect> <!-- kibble is -12; raw food is -7; nutrient paste is -4, pemmican is 0 -->
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThingDef Name="MealNutrientBrickBase" ParentName="MealNutrientBase">
+        <graphicData>
+            <color>(120, 140, 80)</color>
+        </graphicData>
+
+        <stackLimit>15</stackLimit>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <DeteriorationRate>5</DeteriorationRate>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>7</MarketValue> <!-- Raw vegetables are ($1.1 / 0.05 nutrition) * 0.3 nutrition = $6.6 per brick. These should not be good to trade; Not terrible, but not good. -->
+            <Mass>0.27</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>40</daysToRotStart> <!-- pemmican 70, corn 60, rice 40, potatoes 30, berries 14, meals 4 -->
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <tradeability>Sellable</tradeability>
+        <ingestible>
+            <optimalityOffsetHumanlikes>-7</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
+            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <baseIngestTicks>1500</baseIngestTicks>  <!-- Not sure how slow meals are - they don't have any values defined in XML. Maybe 600? Seems like 60 ticks per second. -->
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="MealNutrientBrickBase">
+        <defName>MealNutrientBrick</defName>
+        <label>nutrient brick meal</label>
+        <description>Dehydrated nutrient paste, wrapped in polymer made from inedible food-parts. The dehydration, and polymer-wrapping process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who liked historical films starring Charlton Heston, and hated everyone else. At least it's better than eating kibble.</description>
+
+        <graphicData>
+            <color>(120, 140, 80)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="MealNutrientBrickBase">
+        <defName>MealInsectBrick</defName>
+        <label>insect brick meal</label>
+        <description>Dehydrated insect paste, wrapped in polymer made from inedible food-parts. Colloquially referred to as Bug-Bricks, in a hopeless attempt to distract from the taste.</description>
+
+        <graphicData>
+            <color>(100, 100, 100)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="MealNutrientBrickBase">
+        <defName>MealHumanBrick</defName>
+        <label>human brick meal</label>
+        <description>Dehydrated human paste, wrapped in polymer made from inedible food-parts. The bright color makes them easily distinguishable from other nutrient bricks.</description>
+
+        <graphicData>
+            <color>(200, 120, 100)</color>
+        </graphicData>
     </ThingDef>
 </Defs>
