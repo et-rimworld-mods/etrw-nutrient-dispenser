@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <Patch>
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="MealNutrientPaste"]</xpath>
@@ -7,7 +6,7 @@
             <ThingDef Name="MealNutrientPaste" ParentName="MealNutrientBase">
                 <defName>MealNutrientPaste</defName>
                 <label>nutrient paste meal</label>
-                <description>A synthetic pasteurized mixture of protein, fat, starch, sugars, indigestible fibre, vitamins, and minerals. Everything the body needs, and completely disgusting.</description>
+                <description>A synthetic pasteurized mixture of processed macro- and micro-nutrients. Everything the body needs, in a tasteless slime.</description>
 
                 <graphicData>
                     <texPath>Things/Item/Meal/NutrientPaste</texPath>
@@ -34,6 +33,13 @@
                     <tasteThought>AteNutrientPasteMeal</tasteThought>
                 </ingestible>
             </ThingDef>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="NutrientPaste"]/description</xpath>
+        <value>
+            <description>Nutrient paste dispensers efficiently make safe, edible food. It is however, tasteless slime.</description>
         </value>
     </Operation>
 </Patch>

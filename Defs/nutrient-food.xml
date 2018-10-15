@@ -144,23 +144,4 @@
             <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes> <!-- I *think* the optimality offset is checked second, after preferability of MealAwful, which would end up with pawns eating paste when there's simple meals nearby. (Seemed to happen with my bricks, so I'm patching this on paste.) -->
         </ingestible>
     </ThingDef>
-
-    <ResearchTabDef>
-		<defName>Nutrients</defName>
-		<label>Nutrients</label>
-	</ResearchTabDef>
-
-    <ResearchProjectDef>
-        <defName>FruitLeather</defName>
-        <label>fruit leather</label>
-        <description>Dehydrate fruit, to lengthen its shelf-life. Requires careful control of the temperature and humidity.</description>
-        <baseCost>300</baseCost>
-        <techLevel>Industrial</techLevel>
-        <prerequisites>
-            <li>NutrientPaste</li>
-        </prerequisites>
-        <tab>Nutrients</tab>
-        <researchViewX>0</researchViewX>
-        <researchViewY>0</researchViewY>
-    </ResearchProjectDef>
 </Defs>

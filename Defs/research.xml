@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ResearchTabDef>
+		<defName>Nutrients</defName>
+		<label>Nutrients</label>
+	</ResearchTabDef>
+
+    <ResearchProjectDef>
+        <defName>FruitLeather</defName>
+        <label>fruit leather</label>
+        <description>Dehydrate fruit, to lengthen its shelf-life. Requires careful control of the temperature and humidity.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>0</researchViewY>
+
+        <baseCost>300</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>NutrientPaste</li>
+        </prerequisites>
+    </ResearchProjectDef>
+</Defs>
