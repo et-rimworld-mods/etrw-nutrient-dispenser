@@ -64,10 +64,20 @@
         <recipes>
             <li>MakeNutrientPaste</li>
             <li>MakeNutrientPasteBulk</li>
-            <li>MakeNutrientBrick</li>
-            <li>MakeNutrientBrickBulk</li>
+            <li>MakeInsectPaste</li>
+            <li>MakeInsectPasteBulk</li>
+            <li>MakeHumanPaste</li>
+            <li>MakeHumanPasteBulk</li>
+
             <li>MakeFruitLeather</li>
             <li>MakeFruitLeatherBulk</li>
+
+            <li>MakeNutrientBrick</li>
+            <li>MakeNutrientBrickBulk</li>
+            <li>MakeInsectBrick</li>
+            <li>MakeInsectBrickBulk</li>
+            <li>MakeHumanBrick</li>
+            <li>MakeHumanBrickBulk</li>
         </recipes>
         <inspectorTabs>
             <li>ITab_Bills</li>
@@ -111,10 +121,20 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    </RecipeDef>
+
+
+
+    <RecipeDef Name="MakeNutrientPasteOrBrickBase" ParentName="MakeNutrientBase" Abstract="True">
         <fixedIngredientFilter>
             <categories>
                 <li>FoodRaw</li>
             </categories>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+                <li>InsectJelly</li>
+            </disallowedThingDefs>
             <specialFiltersToDisallow>
                 <li>AllowPlantFood</li>
             </specialFiltersToDisallow>
@@ -126,19 +146,19 @@
             <disallowedCategories>
                 <li>EggsFertilized</li>
             </disallowedCategories>
-            <disallowedThingDefs>
-                <li>Meat_Human</li>
-                <li>Meat_Megaspider</li>
-                <li>InsectJelly</li>
-            </disallowedThingDefs>
         </defaultIngredientFilter>
     </RecipeDef>
 
-    <RecipeDef Name="MakeNutrientPaste" ParentName="MakeNutrientBase">
+    <RecipeDef Name="MakeNutrientPasteBase" ParentName="MakeNutrientPasteOrBrickBase" Abstract="True">
+        <researchPrerequisite>NutrientPaste</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeNutrientPasteBase">
         <defName>MakeNutrientPaste</defName>
         <label>nutrient paste</label>
         <description>Extrude some nutrient paste.</description>
         <jobString>Extruding nutrient paste.</jobString>
+
         <ingredients>
             <li>
                 <filter>
@@ -155,11 +175,12 @@
         <workAmount>100</workAmount>
     </RecipeDef>
 
-    <RecipeDef Name="MakeNutrientPasteBulk" ParentName="MakeNutrientBase">
+    <RecipeDef ParentName="MakeNutrientPasteBase">
         <defName>MakeNutrientPasteBulk</defName>
         <label>nutrient paste (bulk)</label>
         <description>Extrude a batch of nutrient paste.</description>
         <jobString>Extruding nutrient paste.</jobString>
+
         <ingredients>
             <li>
                 <filter>
@@ -176,18 +197,152 @@
         <workAmount>900</workAmount>
     </RecipeDef>
 
-    <RecipeDef Name="MakeFruitLeather">
+
+    <RecipeDef Name="MakeInsectPasteOrBrickBase" ParentName="MakeNutrientBase" Abstract="True">
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Meat_Megaspider</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>Meat_Megaspider</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeInsectPasteBase" ParentName="MakeInsectPasteOrBrickBase" Abstract="True">
+        <researchPrerequisite>InsectMeat</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeNutrientPasteBase">
+        <defName>MakeInsectPaste</defName>
+        <label>insect paste</label>
+        <description>Extrude some insect paste.</description>
+        <jobString>Extruding insect paste.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Megaspider</li>
+                    </thingDefs>
+                </filter>
+                <count>0.3</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealInsectPaste>1</MealInsectPaste>
+        </products>
+        <workAmount>100</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeNutrientPasteBase">
+        <defName>MakeInsectPasteBulk</defName>
+        <label>insect paste (bulk)</label>
+        <description>Extrude a batch of insect paste.</description>
+        <jobString>Extruding insect paste.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Megaspider</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealInsectPaste>10</MealInsectPaste>
+        </products>
+        <workAmount>900</workAmount>
+    </RecipeDef>
+
+
+    <RecipeDef Name="MakeHumanPasteOrBrickBase" ParentName="MakeNutrientBase" Abstract="True">
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Meat_Human</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>Meat_Human</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeHumanPasteBase" ParentName="MakeHumanPasteOrBrickBase" Abstract="True">
+        <researchPrerequisite>HumanMeat</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeNutrientPasteBase">
+        <defName>MakeHumanPaste</defName>
+        <label>human paste</label>
+        <description>Extrude some human paste.</description>
+        <jobString>Extruding human paste.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>0.3</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealHumanPaste>1</MealHumanPaste>
+        </products>
+        <workAmount>100</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeNutrientPasteBase">
+        <defName>MakeHumanPasteBulk</defName>
+        <label>human paste (bulk)</label>
+        <description>Extrude a batch of human paste.</description>
+        <jobString>Extruding human paste.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealHumanPaste>10</MealHumanPaste>
+        </products>
+        <workAmount>900</workAmount>
+    </RecipeDef>
+
+
+
+    <RecipeDef Name="MakeFruitLeatherBase" ParentName="MakeNutrientBase" Abstract="True">
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+        </defaultIngredientFilter>
+        <researchPrerequisite>FruitLeather</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeFruitLeatherBase">
         <defName>MakeFruitLeather</defName>
         <label>fruit leather</label>
         <description>Dehydrate some fruit.</description>
         <jobString>Dehydrating some fruit.</jobString>
 
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
         <ingredients>
             <li>
                 <filter>
@@ -198,35 +353,18 @@
                 <count>0.9</count>
             </li>
         </ingredients>
-        <fixedIngredientFilter>
-            <thingDefs>
-                <li>RawBerries</li>
-            </thingDefs>
-        </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <thingDefs>
-                <li>RawBerries</li>
-            </thingDefs>
-        </defaultIngredientFilter>
         <products>
             <MealFruitLeather>1</MealFruitLeather>
         </products>
         <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 700 (787 per same 0.9 nutrition output) -->
-        <researchPrerequisite>FruitLeather</researchPrerequisite>
     </RecipeDef>
 
-    <RecipeDef Name="MakeFruitLeatherBulk">
+    <RecipeDef ParentName="MakeFruitLeatherBase">
         <defName>MakeFruitLeatherBulk</defName>
         <label>fruit leather (bulk)</label>
         <description>Dehydrate a batch of fruit.</description>
         <jobString>Dehydrating a batch of fruit.</jobString>
 
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-        <allowMixingIngredients>true</allowMixingIngredients>
-        <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
         <ingredients>
             <li>
                 <filter>
@@ -237,31 +375,24 @@
                 <count>9.0</count>
             </li>
         </ingredients>
-        <fixedIngredientFilter>
-            <thingDefs>
-                <li>RawBerries</li>
-            </thingDefs>
-        </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <thingDefs>
-                <li>RawBerries</li>
-            </thingDefs>
-        </defaultIngredientFilter>
         <products>
             <MealFruitLeather>10</MealFruitLeather>
         </products>
         <workAmount>3500</workAmount>
-        <researchPrerequisite>FruitLeather</researchPrerequisite>
     </RecipeDef>
 
-    <!--TODO make separate recipes for insect and human-->
 
 
-    <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBase">
+    <RecipeDef Name="MakeNutrientBrickBase" ParentName="MakeNutrientPasteOrBrickBase" Abstract="True">
+        <researchPrerequisite>NutrientBrick</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeNutrientBrick" ParentName="MakeNutrientBrickBase">
         <defName>MakeNutrientBrick</defName>
         <label>nutrient brick</label>
         <description>Extrude a nutrient brick.</description>
         <jobString>Extruding a nutrient brick.</jobString>
+
         <ingredients>
             <li>
                 <filter>
@@ -276,14 +407,14 @@
             <MealNutrientBrick>1</MealNutrientBrick>
         </products>
         <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 787 (per same 0.9 nutrition output) -->
-        <researchPrerequisite>NutrientBrick</researchPrerequisite>
     </RecipeDef>
 
-    <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBase">
+    <RecipeDef Name="MakeNutrientBrickBulk" ParentName="MakeNutrientBrickBase">
         <defName>MakeNutrientBrickBulk</defName>
         <label>nutrient brick (bulk)</label>
         <description>Extrude a batch of nutrient bricks.</description>
         <jobString>Extruding nutrient bricks.</jobString>
+
         <ingredients>
             <li>
                 <filter>
@@ -298,8 +429,103 @@
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
         <workAmount>3500</workAmount>
-        <researchPrerequisite>NutrientBrick</researchPrerequisite>
     </RecipeDef>
 
-    <!--TODO make separate recipes for insect and human-->
+
+    <RecipeDef Name="MakeInsectBrickBase" ParentName="MakeInsectPasteOrBrickBase" Abstract="True">
+        <researchPrerequisite>InsectBrick</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeInsectBrick" ParentName="MakeInsectBrickBase">
+        <defName>MakeInsectBrick</defName>
+        <label>insect brick</label>
+        <description>Extrude a insect brick.</description>
+        <jobString>Extruding a insect brick.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Megaspider</li>
+                    </thingDefs>
+                </filter>
+                <count>0.35</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealInsectBrick>1</MealInsectBrick>
+        </products>
+        <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 787 (per same 0.9 nutrition output) -->
+    </RecipeDef>
+
+    <RecipeDef Name="MakeInsectBrickBulk" ParentName="MakeInsectBrickBase">
+        <defName>MakeInsectBrickBulk</defName>
+        <label>insect brick (bulk)</label>
+        <description>Extrude a batch of insect bricks.</description>
+        <jobString>Extruding insect bricks.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Megaspider</li>
+                    </thingDefs>
+                </filter>
+                <count>3.5</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealInsectBrick>10</MealInsectBrick>
+        </products>
+        <workAmount>3500</workAmount>
+    </RecipeDef>
+
+
+    <RecipeDef Name="MakeHumanBrickBase" ParentName="MakeHumanPasteOrBrickBase" Abstract="True">
+        <researchPrerequisite>HumanBrick</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef Name="MakeHumanBrick" ParentName="MakeHumanBrickBase">
+        <defName>MakeHumanBrick</defName>
+        <label>human brick</label>
+        <description>Extrude a human brick.</description>
+        <jobString>Extruding a human brick.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>0.35</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealHumanBrick>1</MealHumanBrick>
+        </products>
+        <workAmount>400</workAmount> <!-- packaged survival meal is 450, pemmican is 787 (per same 0.9 nutrition output) -->
+    </RecipeDef>
+
+    <RecipeDef Name="MakeHumanBrickBulk" ParentName="MakeHumanBrickBase">
+        <defName>MakeHumanBrickBulk</defName>
+        <label>human brick (bulk)</label>
+        <description>Extrude a batch of human bricks.</description>
+        <jobString>Extruding human bricks.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Meat_Human</li>
+                    </thingDefs>
+                </filter>
+                <count>3.5</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealHumanBrick>10</MealHumanBrick>
+        </products>
+        <workAmount>3500</workAmount>
+    </RecipeDef>
 </Defs>
