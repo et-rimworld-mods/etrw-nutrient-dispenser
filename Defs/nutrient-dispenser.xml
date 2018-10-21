@@ -350,7 +350,7 @@
                         <li>RawBerries</li>
                     </thingDefs>
                 </filter>
-                <count>0.9</count>
+                <count>0.7</count>
             </li>
         </ingredients>
         <products>
@@ -372,7 +372,7 @@
                         <li>RawBerries</li>
                     </thingDefs>
                 </filter>
-                <count>9.0</count>
+                <count>7.0</count>
             </li>
         </ingredients>
         <products>

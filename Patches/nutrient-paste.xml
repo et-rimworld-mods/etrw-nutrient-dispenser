@@ -17,4 +17,11 @@
             <description>Nutrient paste dispensers efficiently make safe, edible food. It is however, tasteless slime.</description>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ResearchProjectDef[defName="NutrientPaste"]/baseCost</xpath>
+        <value>
+            <baseCost>1200</baseCost>
+        </value>
+    </Operation>
 </Patch>
