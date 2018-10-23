@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+TODO: make this work with the cannibalism trait.
+Maybe make these like drugs, and use invisible hediffs, which give two or more thoughts?
+-->
+
+<Defs>
+    <ThingDef ParentName="MealNutrientPasteBase">
+        <defName>MealHumanPaste</defName>
+        <label>human paste meal</label>
+        <description>A greasy slime made from processed human meat.</description>
+
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <optimalityOffsetHumanlikes>-35</optimalityOffsetHumanlikes>
+            <tasteThought>AteHumanPaste</tasteThought>
+        </ingestible>
+    </ThingDef>
+
+    <ThoughtDef ParentName="NutrientThoughtBase">
+        <defName>AteHumanPaste</defName>
+
+        <stages>
+            <li>
+                <label>ate human paste</label>
+                <description>I'm eating human flesh that's been processed into a greasy slime. They didn't even get the dignity of being cooked by hand...</description>
+                <baseMoodEffect>-25</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+
+    <ThingDef ParentName="MealNutrientBrickBase">
+        <defName>MealHumanBrick</defName>
+        <label>human brick meal</label>
+        <description>Dehydrated human paste, wrapped in polymer made from inedible food-parts. The bright color makes them easily distinguishable from other nutrient bricks.</description>
+
+        <graphicData>
+            <color>(200, 120, 100)</color>
+        </graphicData>
+
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <optimalityOffsetHumanlikes>-40</optimalityOffsetHumanlikes>
+            <tasteThought>AteHumanBrick</tasteThought>
+        </ingestible>
+    </ThingDef>
+
+    <ThoughtDef ParentName="NutrientThoughtBase">
+        <defName>AteHumanBrick</defName>
+
+        <stages>
+            <li>
+                <label>ate nutrient brick</label>
+                <description>Human flesh, processed into a small brick. How did we get to this point? People are getting chopped up, churned, dried, pickled, eaten, stewed, ground to paste - I can't stand it!</description>
+                <baseMoodEffect>-37</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

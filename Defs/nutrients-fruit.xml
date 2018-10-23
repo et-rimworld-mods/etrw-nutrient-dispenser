@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="MealFruitLeather" ParentName="MealNutrientBase">
+        <defName>MealFruitLeather</defName>
+        <label>fruit leather</label>
+        <description>Dehydrated fruit. It's sweet taste makes up for its bland texture, but also makes you thirsty.</description>
+
+        <graphicData>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <texPath>Things/Item/Resource/Cloth</texPath>
+            <color>(90, 0, 130)</color>
+        </graphicData>
+
+        <stackLimit>13</stackLimit>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <DeteriorationRate>8</DeteriorationRate>
+            <Nutrition>0.9</Nutrition>
+            <MarketValue>18</MarketValue> <!-- simple meals are 15, survival packs are 25 -->
+            <Mass>0.27</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>25</daysToRotStart> <!-- potatoes/rawfungus 30, agave 25, berries 14 -->
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <tradeability>Sellable</tradeability>
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
+        </ingestible>
+    </ThingDef>
+</Defs>
