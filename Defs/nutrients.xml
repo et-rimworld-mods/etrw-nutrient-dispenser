@@ -59,22 +59,34 @@
         </ingestible>
     </ThingDef>
 
-    <ThoughtDef Name="NutrientThoughtBase" Abstract="True">
-        <showBubble>true</showBubble>
-        <icon>Things/Mote/ThoughtSymbol/Food</icon>
-        <durationDays>1</durationDays>
-        <!--
-        mood:
-            -20 raw cannibalism
-            -15 cooked cannibalism
-            -12 kibble
-             -7 raw food
-             -6 insect meat
-             -4 base-game nutrient paste
-            +15 cooked cannibalism as cannibal
-            +20 raw cannibalism as cannibal
-        -->
-    </ThoughtDef>
+    <HediffDef Name="AteNutrientHediffBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <!-- no properties, no problems? -->
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--
+    thought moods:
+        -20 raw cannibalism
+        -15 cooked cannibalism
+        -12 kibble
+         -7 raw food
+         -6 insect meat
+         -4 base-game nutrient paste
+        +15 cooked cannibalism as cannibal
+        +20 raw cannibalism as cannibal
+    -->
 
 
 
@@ -101,15 +113,21 @@
         <tradeability>Buyable</tradeability>
     </ThingDef>
 
+    <HediffDef ParentName="AteNutrientHediffBase">
+        <defName>AteNutrientPaste</defName>
+        <label>nutrient paste</label>
+        <labelNoun>a nutrient paste</labelNoun>
+        <defaultLabelColor>(120, 140, 80)</defaultLabelColor>
+    </HediffDef>
 
-    <!--
-    MealNutrientPaste is defined in a patch file to override the base game, because trying to delete it entirely is bad.
-    (Too many things in base game reference it.)
-    -->
-
-    <ThoughtDef ParentName="NutrientThoughtBase">
+    <ThoughtDef>
         <defName>AteNutrientPaste</defName>
 
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientPaste</hediff>
+        <nullifyingTraits>
+			<li>Ascetic</li>
+		</nullifyingTraits>
         <stages>
             <li>
                 <label>ate nutrient paste</label>
@@ -118,6 +136,29 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>AteNutrientPasteAsAscetic</defName>
+
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientPaste</hediff>
+        <requiredTraits>
+            <li>Ascetic</li>
+        </requiredTraits>
+        <stages>
+            <li>
+                <label>ate nutrient paste</label>
+                <description>This nutrient paste is very bland. I like it.</description>
+                <baseMoodEffect>1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+
+    <!--
+    MealNutrientPaste is defined in a patch file to override the base game, because trying to delete it entirely is bad.
+    (Too many things in base game reference it.)
+    -->
 
 
 
@@ -147,6 +188,47 @@
         </ingestible>
     </ThingDef>
 
+    <HediffDef ParentName="AteNutrientHediffBase">
+        <defName>AteNutrientBrick</defName>
+        <label>nutrient brick</label>
+        <labelNoun>a nutrient brick</labelNoun>
+        <defaultLabelColor>(120, 140, 80)</defaultLabelColor>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>AteNutrientBrick</defName>
+
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientBrick</hediff>
+        <nullifyingTraits>
+			<li>Ascetic</li>
+		</nullifyingTraits>
+        <stages>
+            <li>
+                <label>ate nutrient brick</label>
+                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad as the paste, but now it also tastes burnt, from the dehydration process.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>AteNutrientBrickAsAscetic</defName>
+
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientBrick</hediff>
+        <requiredTraits>
+            <li>Ascetic</li>
+        </requiredTraits>
+        <stages>
+            <li>
+                <label>ate nutrient brick</label>
+                <description>This nutrient brick is very bland, dry, and a bit burned - I like it!</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
 
     <ThingDef ParentName="MealNutrientBrickBase">
         <defName>MealNutrientBrick</defName>
@@ -160,19 +242,12 @@
         <ingestible>
             <preferability>MealAwful</preferability>
             <optimalityOffsetHumanlikes>-15</optimalityOffsetHumanlikes>
-            <tasteThought>AteNutrientBrickMeal</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientBrick</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
         </ingestible>
     </ThingDef>
-
-    <ThoughtDef ParentName="NutrientThoughtBase">
-        <defName>AteNutrientBrickMeal</defName>
-
-        <stages>
-            <li>
-                <label>ate nutrient brick</label>
-                <description>I ate a brick of dehydrated nutrient-paste. I'd like to say that it tastes just as bad as the paste, but now it also tastes burnt, from the dehydration process.</description>
-                <baseMoodEffect>-6</baseMoodEffect>
-            </li>
-        </stages>
-    </ThoughtDef>
 </Defs>

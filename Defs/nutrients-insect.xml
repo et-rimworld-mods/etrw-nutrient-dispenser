@@ -8,22 +8,18 @@
         <ingestible>
             <preferability>MealAwful</preferability>
             <optimalityOffsetHumanlikes>-20</optimalityOffsetHumanlikes>
-            <tasteThought>AteInsectPaste</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientsInsect</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientPaste</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
         </ingestible>
     </ThingDef>
-
-    <ThoughtDef ParentName="NutrientThoughtBase">
-        <defName>AteInsectPaste</defName>
-
-        <stages>
-            <li>
-                <label>ate insect paste</label>
-                <description>I ate a tube full of processed insect-parts. The gear-oil helps mask the taste a bit.</description>
-                <baseMoodEffect>-10</baseMoodEffect>
-            </li>
-        </stages>
-    </ThoughtDef>
-
 
     <ThingDef ParentName="MealNutrientBrickBase">
         <defName>MealInsectBrick</defName>
@@ -37,18 +33,57 @@
         <ingestible>
             <preferability>MealAwful</preferability>
             <optimalityOffsetHumanlikes>-25</optimalityOffsetHumanlikes>
-            <tasteThought>AteInsectBrick</tasteThought>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientsInsect</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientBrick</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
         </ingestible>
     </ThingDef>
 
-    <ThoughtDef ParentName="NutrientThoughtBase">
-        <defName>AteInsectBrick</defName>
 
+    <HediffDef ParentName="AteNutrientHediffBase">
+        <defName>AteNutrientsInsect</defName>
+        <label>insect nutrients</label>
+        <labelNoun>some insect nutrients</labelNoun>
+        <defaultLabelColor>(100, 100, 100)</defaultLabelColor>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>AteInsectNutrientsThought</defName>
+
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientsInsect</hediff>
+        <nullifyingTraits>
+			<li>Ascetic</li>
+		</nullifyingTraits>
         <stages>
             <li>
-                <label>ate insect brick</label>
-                <description>The dehydration process actually lessens the flavor of insect guts. It's still terrible, but it could be worse.</description>
-                <baseMoodEffect>-15</baseMoodEffect>
+                <label>ate insect nutrients</label>
+                <description>At least this insect flesh has been highly processed...</description>
+                <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>AteInsectNutrientsAsAsceticThought</defName>
+
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientsInsect</hediff>
+        <requiredTraits>
+            <li>Ascetic</li>
+        </requiredTraits>
+        <stages>
+            <li>
+                <label>ate insect nutrients</label>
+                <description>I don't mind insect flesh...that much.</description>
+                <baseMoodEffect>-2</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>

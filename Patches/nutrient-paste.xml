@@ -11,7 +11,12 @@
                 <ingestible>
                     <preferability>MealAwful</preferability>
                     <optimalityOffsetHumanlikes>-10</optimalityOffsetHumanlikes>
-                    <tasteThought>AteNutrientPaste</tasteThought>
+                    <outcomeDoers>
+                        <li Class="IngestionOutcomeDoer_GiveHediff">
+                            <hediffDef>AteNutrientPaste</hediffDef>
+                            <severity>1.0</severity>
+                        </li>
+                    </outcomeDoers>
                 </ingestible>
             </ThingDef>
         </value>

@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Name="AteHumanHediffBase" Abstract="True">
-        <!--
-        This hediff should be invisible; It's just so I can give thoughts seperately for cannibals.
-        No problems found so far, but I'm leaving these commented-out just in case,
-        so it's easier to debug / remember what I might need to add back in.
-        (copied from Flake...)
-        -->
-        <!--<label>high on flake</label>-->
-        <!--<labelNoun>a flake high</labelNoun>-->
-        <!--<defaultLabelColor>(1,0,0.5)</defaultLabelColor>-->
-
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <maxSeverity>1.0</maxSeverity>
-        <isBad>true</isBad>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1.1</severityPerDay>
-            </li>
-        </comps>
-        <stages>
-            <li>
-                <!--invisible, no problems?-->
-            </li>
-        </stages>
-    </HediffDef>
-
-
     <ThingDef ParentName="MealNutrientPasteBase">
         <defName>MealHumanPaste</defName>
         <label>human paste meal</label>
@@ -38,51 +10,16 @@
             <optimalityOffsetHumanlikes>-35</optimalityOffsetHumanlikes>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>AteHumanPaste</hediffDef>
+                    <hediffDef>AteNutrientsHuman</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientPaste</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
         </ingestible>
     </ThingDef>
-
-    <HediffDef ParentName="AteHumanHediffBase">
-        <defName>AteHumanPaste</defName>
-    </HediffDef>
-
-    <ThoughtDef>
-        <defName>AteHumanPasteThought</defName>
-
-        <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>AteHumanPaste</hediff>
-        <nullifyingTraits>
-			<li>Cannibal</li>
-		</nullifyingTraits>
-        <stages>
-            <li>
-                <label>ate human paste</label>
-                <description>I'm eating human flesh that's been processed into a greasy slime. They didn't even get the dignity of being cooked by hand...</description>
-                <baseMoodEffect>-25</baseMoodEffect>
-            </li>
-        </stages>
-    </ThoughtDef>
-
-    <ThoughtDef>
-        <defName>AteHumanPasteAsCannibalThought</defName>
-
-        <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>AteHumanPaste</hediff>
-        <requiredTraits>
-            <li>Cannibal</li>
-        </requiredTraits>
-        <stages>
-            <li>
-                <label>ate human paste</label>
-                <description>What a waste of tasty human flesh!</description>
-                <baseMoodEffect>10</baseMoodEffect>
-            </li>
-        </stages>
-    </ThoughtDef>
-
 
     <ThingDef ParentName="MealNutrientBrickBase">
         <defName>MealHumanBrick</defName>
@@ -98,47 +35,55 @@
             <optimalityOffsetHumanlikes>-40</optimalityOffsetHumanlikes>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>AteHumanBrick</hediffDef>
+                    <hediffDef>AteNutrientsHuman</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientBrick</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
         </ingestible>
     </ThingDef>
 
-    <HediffDef ParentName="AteHumanHediffBase">
-        <defName>AteHumanBrick</defName>
+
+    <HediffDef ParentName="AteNutrientHediffBase">
+        <defName>AteNutrientsHuman</defName>
+        <label>human nutrients</label>
+        <labelNoun>some human nutrients</labelNoun>
+        <defaultLabelColor>(200, 120, 100)</defaultLabelColor>
     </HediffDef>
 
     <ThoughtDef>
-        <defName>AteHumanBrick</defName>
+        <defName>AteHumanNutrientsThought</defName>
 
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>AteHumanBrick</hediff>
+        <hediff>AteNutrientsHuman</hediff>
         <nullifyingTraits>
 			<li>Cannibal</li>
 		</nullifyingTraits>
         <stages>
             <li>
-                <label>ate human brick</label>
-                <description>Human flesh, processed into a small brick. How did we get to this point? People are getting chopped up, churned, dried, pickled, eaten, stewed, ground to paste - I can't stand it!</description>
-                <baseMoodEffect>-37</baseMoodEffect>
+                <label>ate human nutrients</label>
+                <description>At least this human flesh has been processed enough that it's almost unrecognizable.</description>
+                <baseMoodEffect>-99</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
 
     <ThoughtDef>
-        <defName>AteHumanBrickAsCannibal</defName>
+        <defName>AteHumanNutrientsAsCannibalThought</defName>
 
         <workerClass>ThoughtWorker_Hediff</workerClass>
-        <hediff>AteHumanBrick</hediff>
+        <hediff>AteNutrientsHuman</hediff>
         <requiredTraits>
             <li>Cannibal</li>
         </requiredTraits>
         <stages>
             <li>
-                <label>ate human brick</label>
-                <description>Human flesh, processed into a small brick. I can barely even taste the distinctive flavor!</description>
-                <baseMoodEffect>5</baseMoodEffect>
+                <label>ate human nutrients</label>
+                <description>I can barely taste the distinctive flavor!</description>
+                <baseMoodEffect>10</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
