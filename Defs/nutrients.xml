@@ -35,7 +35,6 @@
             <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
             <ingestEffect>EatVegetarian</ingestEffect>
             <ingestSound>Meal_Eat</ingestSound>
-
             <!--
             preferability:
                 NeverForNutrition
@@ -64,7 +63,6 @@
         <showBubble>true</showBubble>
         <icon>Things/Mote/ThoughtSymbol/Food</icon>
         <durationDays>1</durationDays>
-
         <!--
         mood:
             -20 raw cannibalism
@@ -73,6 +71,8 @@
              -7 raw food
              -6 insect meat
              -4 base-game nutrient paste
+            +15 cooked cannibalism as cannibal
+            +20 raw cannibalism as cannibal
         -->
     </ThoughtDef>
 
