@@ -6,9 +6,18 @@ The official Nutrient Paste Dispenser in Rimworld is a bit old, and has some pro
 - instantaneous paste-production felt weird to me
 
 This mod addresses that, by making the NPD work like a BiofuelRefinery / Stove / work-bench.
-The meals now take time to produce, although are still faster than simple meals, to keep in theme with the original machine.
+The meals now take time to produce, but are still faster than simple meals, to keep in theme with the original machine.
 The nutrients can be made singly (low on resources) or in large batches (slight speed boost).
 Batches also mean pawns aren't constantly hauling to it, even if you don't want to micromanage small stockpiles.
 (I feel like that's in line with the original machine - low-effort, but terrible food.)
-I also added dehydrated nutrient bricks, as a bad replacement for packaged survival meals or pemmican.
-(Slower and tastier than kibble, however, again like survival meals or pemmican.)
+
+Also changed / added:
+- dehydrated nutrient bricks, as a bad replacement for packaged survival meals or pemmican.
+    - (Slower and tastier than kibble, however, again like survival meals or pemmican.)
+- nutrient paste research and packaged survival meal research is more expensive
+- additional research
+    - fruit leather
+    - nutrient bricks
+    - insect nutrients
+    - human nutrients
+- ascetics get a small mood bonus from nutrient paste (and bricks)
