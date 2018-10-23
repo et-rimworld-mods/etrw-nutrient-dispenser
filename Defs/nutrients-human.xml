@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="MealNutrientPasteBase">
+        <defName>MealHumanPaste</defName>
+        <label>human paste meal</label>
+        <description>A greasy slime made from processed human meat.</description>
+
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <optimalityOffsetHumanlikes>-35</optimalityOffsetHumanlikes>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientsHuman</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientPaste</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="MealNutrientBrickBase">
+        <defName>MealHumanBrick</defName>
+        <label>human brick meal</label>
+        <description>Dehydrated human paste, wrapped in polymer made from inedible food-parts. The bright color makes them easily distinguishable from other nutrient bricks.</description>
+
+        <graphicData>
+            <color>(200, 120, 100)</color>
+        </graphicData>
+
+        <ingestible>
+            <preferability>MealAwful</preferability>
+            <optimalityOffsetHumanlikes>-40</optimalityOffsetHumanlikes>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientsHuman</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>AteNutrientBrick</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+
+    <HediffDef ParentName="AteNutrientHediffBase">
+        <defName>AteNutrientsHuman</defName>
+        <label>human nutrients</label>
+        <labelNoun>some human nutrients</labelNoun>
+        <defaultLabelColor>(200, 120, 100)</defaultLabelColor>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>AteHumanNutrientsThought</defName>
+
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientsHuman</hediff>
+        <nullifyingTraits>
+			<li>Cannibal</li>
+		</nullifyingTraits>
+        <stages>
+            <li>
+                <label>ate human nutrients</label>
+                <description>At least this human flesh has been processed enough that it's almost unrecognizable.</description>
+                <baseMoodEffect>-99</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>AteHumanNutrientsAsCannibalThought</defName>
+
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>AteNutrientsHuman</hediff>
+        <requiredTraits>
+            <li>Cannibal</li>
+        </requiredTraits>
+        <stages>
+            <li>
+                <label>ate human nutrients</label>
+                <description>I can barely taste the distinctive flavor!</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

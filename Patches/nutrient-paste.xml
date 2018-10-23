@@ -7,6 +7,17 @@
                 <defName>MealNutrientPaste</defName>
                 <label>nutrient paste meal</label>
                 <description>A synthetic pasteurized mixture of processed macro- and micro-nutrients. Everything the body needs, in a tasteless slime.</description>
+
+                <ingestible>
+                    <preferability>MealAwful</preferability>
+                    <optimalityOffsetHumanlikes>-10</optimalityOffsetHumanlikes>
+                    <outcomeDoers>
+                        <li Class="IngestionOutcomeDoer_GiveHediff">
+                            <hediffDef>AteNutrientPaste</hediffDef>
+                            <severity>1.0</severity>
+                        </li>
+                    </outcomeDoers>
+                </ingestible>
             </ThingDef>
         </value>
     </Operation>
