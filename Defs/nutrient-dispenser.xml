@@ -194,6 +194,7 @@
         <products>
             <MealNutrientPaste>10</MealNutrientPaste>
         </products>
+        <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>900</workAmount>
     </RecipeDef>
 
@@ -256,6 +257,7 @@
         <products>
             <MealInsectPaste>10</MealInsectPaste>
         </products>
+        <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>900</workAmount>
     </RecipeDef>
 
@@ -318,6 +320,7 @@
         <products>
             <MealHumanPaste>10</MealHumanPaste>
         </products>
+        <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>900</workAmount>
     </RecipeDef>
 
@@ -378,6 +381,7 @@
         <products>
             <MealFruitLeather>10</MealFruitLeather>
         </products>
+        <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>3500</workAmount>
     </RecipeDef>
 
@@ -428,6 +432,7 @@
         <products>
             <MealNutrientBrick>10</MealNutrientBrick>
         </products>
+        <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>3500</workAmount>
     </RecipeDef>
 
@@ -477,6 +482,7 @@
         <products>
             <MealInsectBrick>10</MealInsectBrick>
         </products>
+        <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>3500</workAmount>
     </RecipeDef>
 
@@ -526,6 +532,7 @@
         <products>
             <MealHumanBrick>10</MealHumanBrick>
         </products>
+        <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>3500</workAmount>
     </RecipeDef>
 </Defs>
