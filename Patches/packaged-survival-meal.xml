@@ -3,7 +3,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/baseCost</xpath>
         <value>
-            <baseCost>900</baseCost>
+            <baseCost>1500</baseCost>
         </value>
     </Operation>
 </Patch>
