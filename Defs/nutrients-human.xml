@@ -66,7 +66,7 @@
             <li>
                 <label>ate human nutrients</label>
                 <description>At least this human flesh has been processed enough that it's almost unrecognizable.</description>
-                <baseMoodEffect>-379</baseMoodEffect>
+                <baseMoodEffect>-37</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
