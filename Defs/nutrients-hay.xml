@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef ParentName="MealNutrientBase">
+    <ThingDef ParentName="RoughPlantBase">
         <defName>DehydratedHay</defName>
         <label>dehydrated hay</label>
         <description>Hay that's been dehydrated, to make it easier to store, and increase its shelf-life.</description>
@@ -11,34 +11,19 @@
             <color>(165, 160, 25)</color>
         </graphicData>
 
+        <thingCategories>
+            <li>Foods</li>
+        </thingCategories>
         <stackLimit>1000</stackLimit>
         <ingestible>
-            <preferability>DesperateOnlyForHumanlikes</preferability>
             <optimalityOffsetFeedingAnimals>7</optimalityOffsetFeedingAnimals>
             <baseIngestTicks>1000</baseIngestTicks>
-            <tasteThought>AteDehydratedHay</tasteThought>
         </ingestible>
         <statBases>
-            <MaxHitPoints>60</MaxHitPoints>
-            <DeteriorationRate>6</DeteriorationRate>
-            <Nutrition>0.05</Nutrition>
-            <Mass>0.054</Mass>
+            <Mass>0.0028</Mass>
             <MarketValue>0.65</MarketValue>
+            <Flammability>3.0</Flammability>
         </statBases>
         <tradeability>Sellable</tradeability>
     </ThingDef>
-
-    <ThoughtDef>
-		<defName>AteDehydratedHay</defName>
-		<showBubble>true</showBubble>
-		<icon>Things/Mote/ThoughtSymbol/Food</icon>
-		<durationDays>1</durationDays>
-		<stages>
-			<li>
-				<label>ate dehydrated hay</label>
-				<description>I had to eat dehydrated hay, like a livestock animal. What's next, sawdust?</description>
-				<baseMoodEffect>-20</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>
 </Defs>
