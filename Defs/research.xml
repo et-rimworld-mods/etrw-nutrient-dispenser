@@ -21,6 +21,21 @@
     </ResearchProjectDef>
 
     <ResearchProjectDef>
+        <defName>DehydratedHay</defName>
+        <label>dehydrated hay</label>
+        <description>Dehydrate hay, to make it easier to store, and increase its shelf-life.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>0</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>400</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>NutrientPaste</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
         <defName>InsectMeat</defName>
         <label>insect meat</label>
         <description>The bio-engineered insects on this planet have exceptionally tough, odious body tissues. You need to reprogram the machine to be able to process these things.</description>
@@ -40,8 +55,8 @@
         <label>human meat</label>
         <description>Cannibalism is more dangerous than eating other animals, because of the increased risk of parasites and disease-spread. The machine needs to be re-calibrated, with extra processing cycles, to make this safe to eat.</description>
         <tab>Nutrients</tab>
-        <researchViewX>2</researchViewX>
-        <researchViewY>0</researchViewY>
+        <researchViewX>1</researchViewX>
+        <researchViewY>2</researchViewY>
 
         <baseCost>700</baseCost>
         <techLevel>Industrial</techLevel>
@@ -72,7 +87,7 @@
         <description>Processing the insects inedible parts requires careful calibration, since they are so tough.</description>
         <tab>Nutrients</tab>
         <researchViewX>2</researchViewX>
-        <researchViewY>1</researchViewY>
+        <researchViewY>0</researchViewY>
 
         <baseCost>700</baseCost>
         <techLevel>Industrial</techLevel>
@@ -87,8 +102,8 @@
         <label>human meat brick</label>
         <description>Processing human material into a stable polymer requires extra time, since it is so disease-prone.</description>
         <tab>Nutrients</tab>
-        <researchViewX>3</researchViewX>
-        <researchViewY>1</researchViewY>
+        <researchViewX>2</researchViewX>
+        <researchViewY>2</researchViewY>
 
         <baseCost>700</baseCost>
         <techLevel>Industrial</techLevel>
