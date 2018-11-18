@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Kibble"]/stackLimit</xpath>
+        <value>
+            <stackLimit>150</stackLimit>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Pemmican"]/stackLimit</xpath>
+        <value>
+            <stackLimit>150</stackLimit>
+        </value>
+    </Operation>
+</Patch>
