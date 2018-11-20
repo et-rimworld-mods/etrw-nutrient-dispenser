@@ -8,7 +8,7 @@
         <graphicData>
             <graphicClass>Graphic_StackCount</graphicClass>
             <texPath>Things/Item/Resource/StoneBlocks</texPath>
-            <color>(160, 170, 30)</color>
+            <color>(150, 160, 30)</color>
         </graphicData>
 
         <thingCategories>
