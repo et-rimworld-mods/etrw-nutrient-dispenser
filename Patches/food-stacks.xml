@@ -3,14 +3,14 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="Kibble"]</xpath>
         <value>
-            <stackLimit>150</stackLimit>
+            <stackLimit>250</stackLimit>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="Pemmican"]</xpath>
         <value>
-            <stackLimit>150</stackLimit>
+            <stackLimit>250</stackLimit>
         </value>
     </Operation>
 </Patch>
