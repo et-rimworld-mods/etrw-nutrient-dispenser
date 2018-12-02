@@ -183,9 +183,6 @@
             </li>
         </comps>
         <tradeability>Sellable</tradeability>
-        <ingestible>
-            <baseIngestTicks>1500</baseIngestTicks>  <!-- Not sure how slow meals are - they don't have any values defined in XML. Maybe 600? Seems like 60 ticks per second. -->
-        </ingestible>
     </ThingDef>
 
     <HediffDef ParentName="AteNutrientHediffBase">

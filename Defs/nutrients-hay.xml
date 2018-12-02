@@ -17,7 +17,6 @@
         <stackLimit>1000</stackLimit>
         <ingestible>
             <optimalityOffsetFeedingAnimals>7</optimalityOffsetFeedingAnimals>
-            <baseIngestTicks>1000</baseIngestTicks>
         </ingestible>
         <statBases>
             <Mass>0.0028</Mass>
