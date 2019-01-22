@@ -121,7 +121,6 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
 
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
     </RecipeDef>
@@ -400,8 +399,6 @@
         <soundWorking>Recipe_CookMeal</soundWorking>
 
         <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill> <!-- This states what skill gives speed boost? Definitely not what allows prioritization / disallowal... -->
-        <workSkillLearnFactor>0.0</workSkillLearnFactor>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Hay</li>
