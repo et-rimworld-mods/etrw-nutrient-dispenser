@@ -151,11 +151,7 @@
         </defaultIngredientFilter>
     </RecipeDef>
 
-    <RecipeDef Name="MakeNutrientPasteBase" ParentName="MakeNutrientPasteOrBrickBase" Abstract="True">
-        <researchPrerequisite>NutrientPaste</researchPrerequisite>
-    </RecipeDef>
-
-    <RecipeDef ParentName="MakeNutrientPasteBase">
+    <RecipeDef ParentName="MakeNutrientPasteOrBrickBase">
         <defName>MakeNutrientPaste</defName>
         <label>nutrient paste</label>
         <description>Extrude some nutrient paste.</description>
@@ -177,7 +173,7 @@
         <workAmount>100</workAmount>
     </RecipeDef>
 
-    <RecipeDef ParentName="MakeNutrientPasteBase">
+    <RecipeDef ParentName="MakeNutrientPasteOrBrickBase">
         <defName>MakeNutrientPasteBulk</defName>
         <label>nutrient paste (bulk)</label>
         <description>Extrude a batch of nutrient paste.</description>
