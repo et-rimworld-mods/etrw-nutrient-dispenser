@@ -3,6 +3,8 @@
     <name>ET's Nutrient Dispenser</name>
     <author>Elia Tarasoff</author>
     <url>https://github.com/EliaTarasoff/rimworld-nutrient-paste-dispenser</url>
-    <targetVersion>1.0.2059</targetVersion>
+    <supportedVersions>
+        <li>1.0</li>
+    </supportedVersions>
     <description>See the README.md file.</description>
 </ModMetaData>
