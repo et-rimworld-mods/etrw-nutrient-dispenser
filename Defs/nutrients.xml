@@ -171,7 +171,7 @@
         <stackLimit>15</stackLimit>
         <statBases>
             <MaxHitPoints>50</MaxHitPoints>
-            <DeteriorationRate>5</DeteriorationRate>
+            <DeteriorationRate>1</DeteriorationRate>
             <Nutrition>0.9</Nutrition>
             <MarketValue>7</MarketValue> <!-- Raw vegetables are ($1.1 / 0.05 nutrition) * 0.3 nutrition = $6.6 per brick. These should not be good to trade; Not terrible, but not good. -->
             <Mass>0.27</Mass>
@@ -182,7 +182,7 @@
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
-        <tradeability>Sellable</tradeability>
+        <tradeability>All</tradeability>
     </ThingDef>
 
     <HediffDef ParentName="AteNutrientHediffBase">

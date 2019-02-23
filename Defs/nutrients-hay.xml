@@ -23,6 +23,6 @@
             <MarketValue>0.65</MarketValue>
             <Flammability>3.0</Flammability>
         </statBases>
-        <tradeability>Buyable</tradeability>
+        <tradeability>All</tradeability>
     </ThingDef>
 </Defs>

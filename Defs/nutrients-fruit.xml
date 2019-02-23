@@ -14,7 +14,7 @@
         <stackLimit>13</stackLimit>
         <statBases>
             <MaxHitPoints>50</MaxHitPoints>
-            <DeteriorationRate>8</DeteriorationRate>
+            <DeteriorationRate>2.5</DeteriorationRate>
             <Nutrition>0.9</Nutrition>
             <MarketValue>18</MarketValue> <!-- simple meals are 15, survival packs are 25 -->
             <Mass>0.27</Mass>
@@ -25,7 +25,7 @@
                 <rotDestroys>true</rotDestroys>
             </li>
         </comps>
-        <tradeability>Sellable</tradeability>
+        <tradeability>All</tradeability>
         <ingestible>
             <preferability>MealSimple</preferability>
             <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
