@@ -24,3 +24,7 @@ Also changed / added:
 - kibble and pemmican store in bigger stacks
     - at 75 units, there's less total nutrition per space than simple meals, even counting the raw ingredients
     - they're both dried foods, but somehow raw, wet meat and vegetables take up the same space
+
+## Game Versions
+This mod works with the latest game version at the time of latest commit.
+If you need it to work with a previous game version, get it from the "Releases" section on GitHub.
