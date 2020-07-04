@@ -118,6 +118,7 @@
         <label>nutrient paste</label>
         <labelNoun>a nutrient paste</labelNoun>
         <defaultLabelColor>(120, 140, 80)</defaultLabelColor>
+        <description>Ate nutrient paste.</description>
     </HediffDef>
 
     <ThoughtDef>
@@ -190,6 +191,7 @@
         <label>nutrient brick</label>
         <labelNoun>a nutrient brick</labelNoun>
         <defaultLabelColor>(120, 140, 80)</defaultLabelColor>
+        <description>Ate a nutrient brick.</description>
     </HediffDef>
 
     <ThoughtDef>
