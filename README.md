@@ -21,3 +21,6 @@ Also changed / added:
     - insect nutrients
     - human nutrients
 - ascetics get a small mood bonus from nutrient paste (and bricks)
+- kibble and pemmican store in bigger stacks
+    - at 75 units, there's less total nutrition per space than simple meals, even counting the raw ingredients
+    - they're both dried foods, but somehow raw, wet meat and vegetables take up the same space
