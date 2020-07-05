@@ -52,6 +52,7 @@
         <label>human nutrients</label>
         <labelNoun>some human nutrients</labelNoun>
         <defaultLabelColor>(200, 120, 100)</defaultLabelColor>
+        <description>Ate human nutrients.</description>
     </HediffDef>
 
     <ThoughtDef>

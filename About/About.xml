@@ -2,9 +2,12 @@
 <ModMetaData>
     <name>ET's Nutrient Dispenser</name>
     <author>Elia Tarasoff</author>
-    <url>https://github.com/EliaTarasoff/rimworld-nutrient-paste-dispenser</url>
+    <packageId>EliaTarasoff.NutrientDispenser</packageId>
+    <url>https://github.com/et-rimworld-mods/etrw-nutrient-paste-dispenser</url>
+    <description>See the README.md file.</description>
+
     <supportedVersions>
         <li>1.0</li>
+        <li>1.1</li>
     </supportedVersions>
-    <description>See the README.md file.</description>
 </ModMetaData>

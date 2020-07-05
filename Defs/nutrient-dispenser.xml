@@ -120,7 +120,7 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
 
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <allowMixingIngredients>true</allowMixingIngredients>
         <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
     </RecipeDef>
@@ -394,7 +394,7 @@
         <effectWorking>Cook</effectWorking>
         <soundWorking>Recipe_CookMeal</soundWorking>
 
-        <workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Hay</li>
