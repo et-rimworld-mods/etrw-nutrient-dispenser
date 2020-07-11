@@ -101,7 +101,6 @@
             <MaxHitPoints>25</MaxHitPoints>
             <DeteriorationRate>10</DeteriorationRate>
             <Nutrition>0.9</Nutrition>
-            <MarketValue>10</MarketValue>
             <Mass>0.44</Mass>
         </statBases>
         <comps>
@@ -174,7 +173,6 @@
             <MaxHitPoints>50</MaxHitPoints>
             <DeteriorationRate>1</DeteriorationRate>
             <Nutrition>0.9</Nutrition>
-            <MarketValue>7</MarketValue> <!-- Raw vegetables are ($1.1 / 0.05 nutrition) * 0.3 nutrition = $6.6 per brick. These should not be good to trade; Not terrible, but not good. -->
             <Mass>0.27</Mass>
         </statBases>
         <comps>
@@ -237,6 +235,10 @@
         <graphicData>
             <color>(120, 140, 80)</color>
         </graphicData>
+
+        <statBases>
+            <MarketValue>7</MarketValue> <!-- Raw vegetables are ($1.1 or more per 0.05 nutrition) * 0.35 nutrition = $7.7 material cost per brick. These should be priced as a horrible way to use ingredients (on player-sells transactions). Importing them is balanced by the mood. -->
+        </statBases>
 
         <ingestible>
             <preferability>MealAwful</preferability>

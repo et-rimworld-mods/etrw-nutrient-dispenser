@@ -5,6 +5,10 @@
         <label>insect paste meal</label>
         <description>A coarse slime made from processed insect meat.</description>
 
+        <statBases>
+            <MarketValue>4.5</MarketValue> <!-- Insect meat is ($0.5 per 0.05 nutrition) * 0.3 nutrition = 3 cost per paste. These should be a bit more expensive to buy than raw ingredients. -->
+        </statBases>
+
         <ingestible>
             <preferability>MealAwful</preferability>
             <optimalityOffsetHumanlikes>-20</optimalityOffsetHumanlikes>
@@ -29,6 +33,10 @@
         <graphicData>
             <color>(100, 100, 100)</color>
         </graphicData>
+
+        <statBases>
+            <MarketValue>3.2</MarketValue> <!-- Insect meat is ($0.5 per 0.05 nutrition) * 0.35 nutrition = $3.5 material cost per brick. These should be priced as bad exports. Importing them is balanced by the mood. -->
+        </statBases>
 
         <ingestible>
             <preferability>MealAwful</preferability>
