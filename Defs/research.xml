@@ -84,7 +84,7 @@
     <ResearchProjectDef>
         <defName>InsectMeatBrick</defName>
         <label>insect meat brick</label>
-        <description>Processing the insects inedible parts requires careful calibration, since they are so tough.</description>
+        <description>Processing the inedible parts of insects requires careful calibration, since they are so tough.</description>
         <tab>Nutrients</tab>
         <researchViewX>2</researchViewX>
         <researchViewY>0</researchViewY>
@@ -100,7 +100,7 @@
     <ResearchProjectDef>
         <defName>HumanMeatBrick</defName>
         <label>human meat brick</label>
-        <description>Processing human material into a stable polymer requires extra time, since it is so disease-prone.</description>
+        <description>Processing human material into a stable polymer is rather difficult.</description>
         <tab>Nutrients</tab>
         <researchViewX>2</researchViewX>
         <researchViewY>2</researchViewY>

@@ -6,7 +6,7 @@
             <ThingDef ParentName="MealNutrientPasteBase">
                 <defName>MealNutrientPaste</defName>
                 <label>nutrient paste meal</label>
-                <description>A synthetic pasteurized mixture of processed macro- and micro-nutrients. Everything the body needs, in a tasteless slime.</description>
+                <description>Food nutrients, recombined, reconstituted, and reprocessed, into a tasteless slime.</description>
 
                 <statBases>
                     <MarketValue>10</MarketValue>
