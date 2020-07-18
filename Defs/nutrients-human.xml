@@ -90,7 +90,7 @@
         </requiredTraits>
         <stages>
             <li>
-                <label>ate human nutrients</label>
+                <label>ate human nutrients (cannibal)</label>
                 <description>I can barely taste the distinctive flavor!</description>
                 <baseMoodEffect>10</baseMoodEffect>
             </li>

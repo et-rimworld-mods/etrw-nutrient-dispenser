@@ -90,7 +90,7 @@
         </requiredTraits>
         <stages>
             <li>
-                <label>ate insect nutrients</label>
+                <label>ate insect nutrients (ascetic)</label>
                 <description>I don't mind insect flesh...that much.</description>
                 <baseMoodEffect>-2</baseMoodEffect>
             </li>
