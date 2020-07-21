@@ -230,7 +230,7 @@
     <ThingDef ParentName="MealNutrientBrickBase">
         <defName>MealNutrientBrick</defName>
         <label>nutrient brick meal</label>
-        <description>Dehydrated nutrient paste, wrapped in polymer made from inedible food-parts. The dehydration, and polymer-wrapping process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who liked historical films starring Charlton Heston, and hated everyone else. At least it's better than eating kibble.</description>
+        <description>Dehydrated nutrient paste, wrapped in polymer made from inedible food-parts. The dehydration, and polymer-wrapping process for nutrient paste was invented to keep people alive on long-haul cargo routes. Unfortunately, it tastes just as bad as nutrient paste...that's also been burned a little. Rumored to have been invented by a scientist who idolized the historical film actor Charlton Heston, and hated everyone else. At least it's better than eating kibble.</description>
 
         <graphicData>
             <color>(120, 140, 80)</color>
