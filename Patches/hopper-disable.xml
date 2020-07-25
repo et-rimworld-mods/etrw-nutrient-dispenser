@@ -5,9 +5,9 @@
         <value>
             <ThingDef ParentName="BuildingBase">
                 <!--
-                This definition, is to override the base-game hopper, since my NPD doesn't make use of it.
+                Override the base-game hopper, since my NPD doesn't make use of it.
                 i.e. Make empty building with same name, that isn't listed anywhere to build.
-                Many things reference it, so I can't just remove it with a patch:
+                Many things reference it, so it can't be made abstract or deleted with a patch:
                     "Failed to find Verse.ThingDef named Hopper. There are 1178 defs of this type loaded."
                 -->
                 <defName>Hopper</defName>
