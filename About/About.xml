@@ -4,7 +4,7 @@
     <author>Elia Tarasoff</author>
     <packageId>EliaTarasoff.NutrientDispenser</packageId>
     <url>https://github.com/et-rimworld-mods/etrw-nutrient-paste-dispenser</url>
-    <description>See the README.md file.</description>
+    <description>See the README.md and LICENSE files.</description>
 
     <supportedVersions>
         <li>1.0</li>
