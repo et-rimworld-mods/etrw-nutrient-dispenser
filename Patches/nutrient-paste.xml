@@ -29,7 +29,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>/Defs/ResearchProjectDef[defName="NutrientPaste"]/description</xpath>
         <value>
-            <description>Nutrient paste dispensers efficiently make safe, edible food. It is however, tasteless slime.</description>
+            <description>Nutrient paste dispensers efficiently make safe, edible food...that lacks all taste and texture.</description>
         </value>
     </Operation>
 

@@ -28,7 +28,7 @@
     <ThingDef ParentName="MealNutrientBrickBase">
         <defName>MealInsectBrick</defName>
         <label>insect brick meal</label>
-        <description>Dehydrated insect paste, wrapped in polymer made from inedible food-parts. Colloquially referred to as Bug-Bricks, in a hopeless attempt to distract from the taste.</description>
+        <description>Insect paste, dried, compressed into bricks, and wrapped in polymer made from inedible food-parts. Colloquially referred to as Bug-Bricks, in a hopeless attempt to distract from the taste.</description>
 
         <graphicData>
             <color>(100, 100, 100)</color>

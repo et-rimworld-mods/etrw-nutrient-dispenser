@@ -28,7 +28,7 @@
     <ThingDef ParentName="MealNutrientBrickBase">
         <defName>MealHumanBrick</defName>
         <label>human brick meal</label>
-        <description>Dehydrated human paste, wrapped in polymer made from inedible food-parts. The bright color makes them easily distinguishable from other nutrient bricks.</description>
+        <description>Human paste, dried, compressed into bricks, and wrapped in polymer made from inedible food-parts. The bright, cheerful color is a futile attempt at camouflage.</description>
 
         <graphicData>
             <color>(200, 120, 100)</color>
