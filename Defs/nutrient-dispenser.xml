@@ -4,7 +4,7 @@
     <ThingDef Name="NutrientPasteDispenser" ParentName="BenchBase">
         <defName>NutrientPasteDispenser</defName>  <!--Oops. This should probably be patched, rather than just re-use the same name...-->
         <label>nutrient dispenser</label>
-        <description>A machine that processes raw foodstuffs into safe, edible paste. It uses less time and ingredients than cooking a meal by hand, but nobody likes eating this tasteless slime. On top of that, the machine looks like a freak combination of gears, pipes, and random junk, emits horrid noises, and smells; You don't want to stick around this machine unless you absolutely have to.</description>
+        <description>A machine that processes raw foodstuffs into safe, edible paste. It uses less time and ingredients than cooking a meal by hand, but nobody likes eating this tasteless slime.</description>
 
         <!--Visuals-->
         <graphicData>
@@ -30,7 +30,7 @@
             <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>2500</WorkToBuild>
             <Flammability>0.5</Flammability>
-            <Beauty>-300</Beauty>
+            <Beauty>-50</Beauty>
             <Mass>200</Mass>
         </statBases>
         <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
