@@ -385,45 +385,6 @@
 
 
 
-    <RecipeDef>
-        <defName>DehydrateHay</defName>
-        <label>dehydrate hay</label>
-        <description>Dehydrate a bale of hay.</description>
-        <jobString>Dehydrating some hay.</jobString>
-
-        <effectWorking>Cook</effectWorking>
-        <soundWorking>Recipe_CookMeal</soundWorking>
-
-        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-        <fixedIngredientFilter>
-            <thingDefs>
-                <li>Hay</li>
-            </thingDefs>
-        </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <thingDefs>
-                <li>Hay</li>
-            </thingDefs>
-        </defaultIngredientFilter>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Hay</li>
-                    </thingDefs>
-                </filter>
-                <count>200</count>
-            </li>
-        </ingredients>
-        <products>
-            <DehydratedHay>200</DehydratedHay>
-        </products>
-        <workAmount>1200</workAmount> <!-- kibble is 450 for 50, or 1800 for 200 -->
-        <researchPrerequisite>DehydratedHay</researchPrerequisite>
-    </RecipeDef>
-
-
-
     <RecipeDef Name="MakeNutrientBrickBase" ParentName="MakeNutrientPasteOrBrickBase" Abstract="True">
         <researchPrerequisite>NutrientBrick</researchPrerequisite>
     </RecipeDef>
