@@ -237,7 +237,7 @@
         </graphicData>
 
         <statBases>
-            <MarketValue>7</MarketValue> <!-- Raw vegetables are ($1.1 or more per 0.05 nutrition) * 0.35 nutrition = $7.7 material cost per brick. These should be priced as a horrible way to use ingredients (on player-sells transactions). Importing them is balanced by the mood. -->
+            <MarketValue>9</MarketValue> <!-- Raw vegetables are ($1.1 or more per 0.05 nutrition) * 0.45 nutrition = $9.9 material cost per brick. These should be priced as a horrible way to use ingredients (on player-sells transactions). Importing them is balanced by the mood. -->
         </statBases>
 
         <ingestible>

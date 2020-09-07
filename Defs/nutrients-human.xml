@@ -6,7 +6,7 @@
         <description>A greasy slime made from processed human meat.</description>
 
         <statBases>
-            <MarketValue>7.5</MarketValue> <!-- Human meat is ($0.8 per 0.05 nutrition) * 0.3 nutrition = $4.8 cost per paste. These should be a bit more expensive to buy than raw ingredients. -->
+            <MarketValue>9.5</MarketValue> <!-- Human meat is ($0.8 per 0.05 nutrition) * 0.4 nutrition = $6.4 cost per paste. These should be a bit more expensive to buy than raw ingredients. -->
         </statBases>
 
         <ingestible>
@@ -35,7 +35,7 @@
         </graphicData>
 
         <statBases>
-            <MarketValue>5</MarketValue> <!-- Human meat is ($0.8 per 0.05 nutrition) * 0.35 nutrition = $5.6 material cost per brick. These should be priced as a horrible way to indignify human remains. (On exports; Imports are balanced by the mood. Cannibals only benefit a bit.) -->
+            <MarketValue>6.5</MarketValue> <!-- Human meat is ($0.8 per 0.05 nutrition) * 0.45 nutrition = $7.2 material cost per brick. These should be priced as a horrible way to indignify human remains. (On exports; Imports are balanced by the mood. Cannibals only benefit a bit.) -->
         </statBases>
 
         <ingestible>
