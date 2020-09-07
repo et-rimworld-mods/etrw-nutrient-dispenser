@@ -406,7 +406,7 @@
                         <li>FoodRaw</li>
                     </categories>
                 </filter>
-                <count>0.35</count>
+                <count>3.5</count>
             </li>
         </ingredients>
         <targetCountAdjustment>10</targetCountAdjustment>
@@ -427,7 +427,7 @@
                         <li>RawBerries</li>
                     </thingDefs>
                 </filter>
-                <count>0.1</count>
+                <count>1.0</count>
             </li>
         </ingredients>
         <products>
@@ -448,7 +448,7 @@
                         <li>Chocolate</li>
                     </thingDefs>
                 </filter>
-                <count>0.1</count>
+                <count>1.0</count>
             </li>
         </ingredients>
         <products>
