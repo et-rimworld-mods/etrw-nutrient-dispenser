@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!--
+    research-tab spacing:
+    P   B
+        IP  IB
+        HP  HB
+        FL  CB  PSM
+    -->
     <ResearchTabDef>
 		<defName>Nutrients</defName>
 		<label>Nutrients</label>
 	</ResearchTabDef>
 
+
     <ResearchProjectDef>
-        <defName>FruitLeather</defName>
-        <label>fruit leather</label>
-        <description>Dehydrate fruit, to lengthen its shelf-life. Requires careful control of the temperature and humidity.</description>
+        <defName>NutrientBrick</defName>
+        <label>nutrient brick</label>
+        <description>Dehydrated, polymer-wrapped nutrient bricks were invented to keep people alive on long-haul cargo routes. Your "research" is actually breaking the fail-safe encryption codes, put there to keep people from eating this crud.</description>
         <tab>Nutrients</tab>
-        <researchViewX>0</researchViewX>
+        <researchViewX>1</researchViewX>
         <researchViewY>0</researchViewY>
 
-        <baseCost>600</baseCost>
+        <baseCost>1000</baseCost>
         <techLevel>Industrial</techLevel>
         <prerequisites>
             <li>NutrientPaste</li>
         </prerequisites>
     </ResearchProjectDef>
+
 
     <ResearchProjectDef>
         <defName>InsectMeat</defName>
@@ -26,7 +35,7 @@
         <description>The bio-engineered insects on this planet have exceptionally tough, odious body tissues. You need to reprogram the machine to be able to process these things.</description>
         <tab>Nutrients</tab>
         <researchViewX>1</researchViewX>
-        <researchViewY>0</researchViewY>
+        <researchViewY>1</researchViewY>
 
         <baseCost>700</baseCost>
         <techLevel>Industrial</techLevel>
@@ -34,6 +43,25 @@
             <li>NutrientPaste</li>
         </prerequisites>
     </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>InsectMeatBrick</defName>
+        <label>insect meat brick</label>
+        <description>Processing the inedible parts of insects requires careful calibration, since they are so tough.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>2</researchViewX>
+        <researchViewY>1</researchViewY>
+
+        <baseCost>700</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>InsectMeat</li>
+        </prerequisites>
+        <hiddenPrerequisites>
+            <li>NutrientBrick</li>
+        </hiddenPrerequisites>
+    </ResearchProjectDef>
+
 
     <ResearchProjectDef>
         <defName>HumanMeat</defName>
@@ -50,38 +78,6 @@
         </prerequisites>
     </ResearchProjectDef>
 
-
-    <ResearchProjectDef>
-        <defName>NutrientBrick</defName>
-        <label>nutrient brick</label>
-        <description>Dehydrated, polymer-wrapped nutrient bricks were invented to keep people alive on long-haul cargo routes. Your "research" is actually breaking the fail-safe encryption codes, put there to keep people from eating this crud.</description>
-        <tab>Nutrients</tab>
-        <researchViewX>1</researchViewX>
-        <researchViewY>1</researchViewY>
-
-        <baseCost>1000</baseCost>
-        <techLevel>Industrial</techLevel>
-        <prerequisites>
-            <li>NutrientPaste</li>
-        </prerequisites>
-    </ResearchProjectDef>
-
-    <ResearchProjectDef>
-        <defName>InsectMeatBrick</defName>
-        <label>insect meat brick</label>
-        <description>Processing the inedible parts of insects requires careful calibration, since they are so tough.</description>
-        <tab>Nutrients</tab>
-        <researchViewX>2</researchViewX>
-        <researchViewY>0</researchViewY>
-
-        <baseCost>700</baseCost>
-        <techLevel>Industrial</techLevel>
-        <prerequisites>
-            <li>InsectMeat</li>
-            <li>NutrientBrick</li>
-        </prerequisites>
-    </ResearchProjectDef>
-
     <ResearchProjectDef>
         <defName>HumanMeatBrick</defName>
         <label>human meat brick</label>
@@ -94,7 +90,43 @@
         <techLevel>Industrial</techLevel>
         <prerequisites>
             <li>HumanMeat</li>
-            <li>NutrientBrick</li>
         </prerequisites>
+        <hiddenPrerequisites>
+            <li>NutrientBrick</li>
+        </hiddenPrerequisites>
+    </ResearchProjectDef>
+
+
+    <ResearchProjectDef>
+        <defName>FruitLeather</defName>
+        <label>fruit leather</label>
+        <description>Dehydrate fruit, to lengthen its shelf-life. Requires careful control of the temperature and humidity.</description>
+        <tab>Nutrients</tab>
+        <researchViewX>1</researchViewX>
+        <researchViewY>3</researchViewY>
+
+        <baseCost>600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>NutrientPaste</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>BrickNice</defName>
+        <label>Chunk-O Bars</label>
+        <description>Combine nutrients - and actual flavor!</description>
+        <tab>Nutrients</tab>
+        <researchViewX>2</researchViewX>
+        <researchViewY>3</researchViewY>
+
+        <baseCost>1000</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>FruitLeather</li>
+        </prerequisites>
+        <hiddenPrerequisites>
+            <li>NutrientBrick</li>
+        </hiddenPrerequisites>
     </ResearchProjectDef>
 </Defs>

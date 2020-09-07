@@ -31,4 +31,52 @@
             <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
         </ingestible>
     </ThingDef>
+
+    <ThingDef ParentName="MealNutrientBrickBase">
+        <defName>MealBrickFruity</defName>
+        <label>Fruity-Boy</label>
+        <description>Fruity-Boy - all the fruity flavor of berries, fortified with Nutro-Max Nutramints!</description>
+
+        <graphicData>
+            <color>(90, 0, 130)</color>
+        </graphicData>
+
+        <statBases>
+            <!--
+            Raw vegetables are ($1.1 or more per 0.05 nutrition) * 0.35 nutrition = $7.7 material cost per brick.
+            Berries are ($2.5 per 0.05 nutrition) * 0.1 nutrition = $5.0 material cost per brick.
+            TODO price these around what PSM is...?
+            -->
+            <MarketValue>12.7</MarketValue>
+        </statBases>
+
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <optimalityOffsetHumanlikes>15</optimalityOffsetHumanlikes>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="MealNutrientBrickBase">
+        <defName>MealBrickChocolate</defName>
+        <label>Choco-Bar</label>
+        <description>Choco-Bars bring the hoity-toity flavor of chocolate to the working man!</description>
+
+        <graphicData>
+            <color>(70, 40, 10)</color>
+        </graphicData>
+
+        <statBases>
+            <!--
+            Raw vegetables are ($1.1 or more per 0.05 nutrition) * 0.35 nutrition = $7.7 material cost per brick.
+            Chocolate is ($3.0 per 0.1 nutrition) * 0.1 nutrition = $3.0 material cost per brick.
+            TODO price these around what PSM is...?
+            -->
+            <MarketValue>10.7</MarketValue>
+        </statBases>
+
+        <ingestible>
+            <preferability>MealSimple</preferability>
+            <optimalityOffsetHumanlikes>10</optimalityOffsetHumanlikes>
+        </ingestible>
+    </ThingDef>
 </Defs>

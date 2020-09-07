@@ -27,16 +27,25 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ResearchProjectDef[defName="NutrientPaste"]/description</xpath>
+        <xpath>/Defs/ResearchProjectDef[defName="NutrientPaste"]</xpath>
         <value>
-            <description>Nutrient paste dispensers efficiently make safe, edible food...that lacks all taste and texture.</description>
-        </value>
-    </Operation>
+            <ResearchProjectDef>
+                <defName>NutrientPaste</defName>
+                <label>nutrient paste</label>
+                <description>Nutrient paste dispensers efficiently make safe, edible food...that lacks all taste and texture.</description>
+                <tab>Nutrients</tab>
+                <researchViewX>0</researchViewX>
+                <researchViewY>0</researchViewY>
 
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ResearchProjectDef[defName="NutrientPaste"]/baseCost</xpath>
-        <value>
-            <baseCost>1200</baseCost>
+                <baseCost>1200</baseCost>
+                <techLevel>Industrial</techLevel>
+                <prerequisites>
+                    <li>Electricity</li>
+                </prerequisites>
+                <tags>
+                    <li>ClassicStart</li> <!-- the game looks for this tag, for the normal scenarios? -->
+                </tags>
+            </ResearchProjectDef>
         </value>
     </Operation>
 </Patch>

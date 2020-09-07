@@ -71,7 +71,8 @@
 
             <li>MakeFruitLeather</li>
             <li>MakeFruitLeatherBulk</li>
-            <li>DehydrateHay</li>
+            <li>MakeBrickFruitBulk</li>
+            <li>MakeBrickChocolateBulk</li>
 
             <li>MakeNutrientBrick</li>
             <li>MakeNutrientBrickBulk</li>
@@ -144,7 +145,6 @@
             <disallowedThingDefs>
                 <li>Meat_Human</li>
                 <li>Meat_Megaspider</li>
-                <li>InsectJelly</li>
             </disallowedThingDefs>
             <specialFiltersToDisallow>
                 <li>AllowPlantFood</li>
@@ -212,11 +212,6 @@
                 <li>Meat_Megaspider</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <thingDefs>
-                <li>Meat_Megaspider</li>
-            </thingDefs>
-        </defaultIngredientFilter>
     </RecipeDef>
 
     <RecipeDef Name="MakeInsectPasteBase" ParentName="MakeInsectPasteOrBrickBase" Abstract="True">
@@ -275,11 +270,6 @@
                 <li>Meat_Human</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <thingDefs>
-                <li>Meat_Human</li>
-            </thingDefs>
-        </defaultIngredientFilter>
     </RecipeDef>
 
     <RecipeDef Name="MakeHumanPasteBase" ParentName="MakeHumanPasteOrBrickBase" Abstract="True">
@@ -339,11 +329,6 @@
                 <li>RawBerries</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <defaultIngredientFilter>
-            <thingDefs>
-                <li>RawBerries</li>
-            </thingDefs>
-        </defaultIngredientFilter>
         <researchPrerequisite>FruitLeather</researchPrerequisite>
     </RecipeDef>
 
@@ -390,6 +375,85 @@
         </products>
         <targetCountAdjustment>10</targetCountAdjustment>
         <workAmount>3500</workAmount>
+    </RecipeDef>
+
+
+    <RecipeDef Name="MakeBricksNiceBase" ParentName="MakeNutrientBase" Abstract="True">
+        <fixedIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <disallowedThingDefs>
+                <li>Meat_Human</li>
+                <li>Meat_Megaspider</li>
+            </disallowedThingDefs>
+            <specialFiltersToDisallow>
+                <li>AllowPlantFood</li>
+            </specialFiltersToDisallow>
+        </fixedIngredientFilter>
+        <defaultIngredientFilter>
+            <categories>
+                <li>FoodRaw</li>
+            </categories>
+            <disallowedCategories>
+                <li>EggsFertilized</li>
+            </disallowedCategories>
+        </defaultIngredientFilter>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>FoodRaw</li>
+                    </categories>
+                </filter>
+                <count>0.35</count>
+            </li>
+        </ingredients>
+        <targetCountAdjustment>10</targetCountAdjustment>
+        <workAmount>4000</workAmount> <!-- slower than nutrient bricks -->
+        <researchPrerequisite>BrickNice</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeBricksNiceBase">
+        <defName>MakeBrickFruitBulk</defName>
+        <label>Fruity-Boys</label>
+        <description>Chunk out some Fruity-Boys.</description>
+        <jobString>Chunking Fruity-Boys.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawBerries</li>
+                    </thingDefs>
+                </filter>
+                <count>0.1</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealBrickFruity>10</MealBrickFruity>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="MakeBricksNiceBase">
+        <defName>MakeBrickChocolateBulk</defName>
+        <label>Choco-Bricks</label>
+        <description>Chunk out some Choco-Bars.</description>
+        <jobString>Chunking Choco-Bars.</jobString>
+
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chocolate</li>
+                    </thingDefs>
+                </filter>
+                <count>0.1</count>
+            </li>
+        </ingredients>
+        <products>
+            <MealBrickChocolate>10</MealBrickChocolate>
+        </products>
     </RecipeDef>
 
 
