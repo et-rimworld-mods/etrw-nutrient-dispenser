@@ -386,6 +386,8 @@
             <disallowedThingDefs>
                 <li>Meat_Human</li>
                 <li>Meat_Megaspider</li>
+                <li>RawBerries</li>
+                <li>Chocolate</li>
             </disallowedThingDefs>
             <specialFiltersToDisallow>
                 <li>AllowPlantFood</li>
@@ -405,6 +407,10 @@
                     <categories>
                         <li>FoodRaw</li>
                     </categories>
+                    <disallowedThingDefs>
+                        <li>RawBerries</li>
+                        <li>Chocolate</li>
+                    </disallowedThingDefs>
                 </filter>
                 <count>3.5</count>
             </li>
