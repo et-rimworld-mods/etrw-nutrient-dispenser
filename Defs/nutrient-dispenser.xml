@@ -416,7 +416,7 @@
             </li>
         </ingredients>
         <targetCountAdjustment>10</targetCountAdjustment>
-        <workAmount>4000</workAmount> <!-- slower than nutrient bricks -->
+        <workAmount>4375</workAmount> <!-- 25% slower than nutrient bricks (3500) -->
         <researchPrerequisite>BrickNice</researchPrerequisite>
     </RecipeDef>
 
@@ -433,7 +433,7 @@
                         <li>RawBerries</li>
                     </thingDefs>
                 </filter>
-                <count>1.0</count>
+                <count>1.55</count> <!-- same nutrient-efficiency of fruit-leather (if was same as bricks, would be 1.0) -->
             </li>
         </ingredients>
         <products>
@@ -454,7 +454,7 @@
                         <li>Chocolate</li>
                     </thingDefs>
                 </filter>
-                <count>1.0</count>
+                <count>1.55</count> <!-- same nutrient-efficiency of fruit-leather (if was same as bricks, would be 1.0) -->
             </li>
         </ingredients>
         <products>
